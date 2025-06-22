@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南阳维度智能装备有限公司 | 工厂自动化解决方案专家</title>
+    
+    <!-- 浏览器标签图标 -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/LOGO/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/LOGO/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/LOGO/apple-touch-icon.png">
+    <link rel="mask-icon" href="/assets/LOGO/safari-pinned-tab.svg" color="#0056b3"> <!-- 用于Safari固定标签页 -->
+    <meta name="msapplication-TileColor" content="#0056b3"> <!-- 用于Windows磁贴 -->
+    <meta name="theme-color" content="#ffffff"> <!-- 用于移动浏览器顶部颜色 -->
+
+    <meta name="description" content="专业提供汽车制造、动力电池等行业的智能装配线、自动化检测设备和工业机器人集成解决方案">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" /> <!-- 引入 Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            
+            <div class="logo">
+                <img src="assets/LOGO/DIMENSION LOGO1.png" alt="维度智能公司LOGO">
+                <div class="logo-text">维度<span>智能</span></div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav_home">首页</a></li>
+                <li><a href="#about" data-i18n="nav_about">关于我们</a></li>
+                <li><a href="#solutions" data-i18n="nav_solutions">行业方案</a></li>
+                <li><a href="#equipment" data-i18n="nav_equipment">设备中心</a></li>
+                <li><a href="#cases" data-i18n="nav_cases">成功案例</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">联系我们</a></li>
+            </ul>
+            
+            <div class="language-switcher">
+                <div class="dropdown-language">
+                    <button class="dropdown-toggle" id="lang-toggle">
+                        <i class="fas fa-globe"></i>
+                        <span id="current-lang-text">中文</span>
+                        <i class="fas fa-caret-down"></i>
+                    </button>
+                    <ul class="dropdown-menu" id="lang-menu">
+                        <li><button class="dropdown-item" data-lang="zh">中文</button></li>
+                        <li><button class="dropdown-item" data-lang="en">English</button></li>
+                        <li><button class="dropdown-item" data-lang="ko">한국어</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部区域 -->
+    <header class="hero" id="home">
+        <div class="container hero-content">
+            <!-- <h1>智能制造 · 驱动未来</h1> -->
+            <h1 data-i18n="hero_title">有限世界 · 无限维度</h1>
+            <p data-i18n="hero_Subtitle">南阳维度智能装备 - 为全球制造企业提供高精度、高可靠性的自动化生产解决方案</p>
+            <div class="hero-btns">
+                <a href="#solutions" class="btn btn-primary">行业解决方案</a>
+                <a href="#contact" class="btn btn-secondary">获取方案咨询</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于公司 -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于维度智能</h2>
+                <p>15年专注工业自动化领域的技术积累与创新</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>让生产更智能</h3>
+                    <p>南阳维度智能装备有限公司成立于2017年，核心团队拥有15年以上自动化设备研发经验，已为200+制造企业提供自动化升级服务。</p>
+                    <p>我们专注于：精密装配系统、智能检测设备、柔性生产线和数字化工厂整体解决方案。</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">200+</div>
+                            <div>服务客户</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div>专利技术</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98.7%</div>
+                            <div>设备稼动率</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="assets/images/factory.png" alt="维度智能工厂图片">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业解决方案 -->
+    <section class="industry-solutions" id="solutions">
+        <div class="container">
+            <div class="section-title">
+                <h2>行业定制解决方案</h2>
+                <p>针对不同行业的特殊需求提供专属自动化方案</p>
+            </div>
+            
+            <div class="solution-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="automotive">汽车制造</button>
+                    <button class="tab-btn" data-tab="battery">动力电池</button>
+                    <!-- <button class="tab-btn" data-tab="electronics">3C电子</button> -->
+                    <button class="tab-btn" data-tab="logistics">智能物流</button>
+                </div>
+                
+                <div class="tab-content active" id="automotive">
+                    <div class="solution-detail">
+                        <h3>汽车行业全流程自动化</h3>
+                        <ul>
+                            <li> 动力总成智能装配线（发动机/变速箱）</li>
+                            <li> 车身焊接机器人工作站（铝点焊/激光焊）</li>
+                            <li> 汽车电子ECU自动化测试系统</li>
+                            <li> 整车厂AGV物流配送系统</li>
+                        </ul>
+                        <div class="tech-highlight">
+                            <h4>核心技术：</h4>
+                            <span class="tech-tag">视觉引导装配</span>
+                            <span class="tech-tag">扭矩大数据分析</span>
+                            <span class="tech-tag">数字孪生调试</span>
+                        </div>
+                        <!-- <a href="#" class="btn btn-outline">查看详细方案 →</a> -->
+                    </div>
+                    <div class="solution-image">
+                        <img src="assets/images/auto-solution.png" alt="汽车行业解决方案">
+                    </div>
+                </div>
+
+                <div class="tab-content active" id="battery">
+                    <div class="solution-detail">
+                        <h3>助力新能源锂电智造</h3>
+                        <ul>
+                            <li> 锂电池的生产系统解决方案：由圆柱电芯、方壳电芯或软包电芯所构成的模组。</li>
+                            <li> 采用螺钉拧紧，激光焊接，涂胶或压接等连接技术。</li>
+                            <li> 根据客户需求，定制半自动化或全自动化的生产装配线。</li>
+                            <li> 生产系统安全、防火，通过对操作人员的充分培训，满足定制化需求。</li>
+                            <li> 生产系统可与实际作业者共同开发设计，提供个性定制化服务。</li>
+                            <li> 交钥匙系统工程，集成模组的质量监控和来源追溯，以及EOL测试。</li>
+                            <li> 提供出口欧盟资质的CE自我申明，配套成熟的管理程序及对应流程资料。</li>
+                        </ul>
+                        <div class="tech-highlight">
+                            <h4>核心技术：</h4>
+                            <span class="tech-tag">电芯壳体制造</span>
+                            <span class="tech-tag">电芯制造装配</span>
+                            <span class="tech-tag">叠片</span>
+                            <span class="tech-tag">电芯成型模组</span>
+                            <span class="tech-tag">模组/PACK装配</span>
+                            <span class="tech-tag">相关零部件</span>
+                            <span class="tech-tag">母线铜排装配</span>
+                            <span class="tech-tag">电极装配</span>
+                        </div>
+                        <!-- <a href="#" class="btn btn-outline">查看详细方案 →</a> -->
+                    </div>
+                    <div class="solution-image">
+                        <img src="assets/images/auto-solution-battery.png" alt="锂电智造解决方案">
+                    </div>
+                </div>
+
+                <div class="tab-content active" id="logistics">
+                    <div class="solution-detail">
+                        <h3>智能物流</h3>
+                        <ul>
+                            <li> 实现物料半成品存储转运，工序间物料自动上下料。高效降本，实现无人化生产</li>
+                            <li> 柔性定制各生产工艺物料智能配送，实现仓储、配送、分拣多维一体系统自动化、智能化</li>
+                            <li> 有效提升仓储空间利用率，减少人工成本损耗，实现库存物料经济、合理、有效地流动</li>
+                            <li> 核心软件系统自主研发。实现信息追溯、数据处理、设备调度、安全控制等多元化服务</li>
+                        </ul>
+                        <div class="tech-highlight">
+                            <h4>核心技术：</h4>
+                            <span class="tech-tag">柔性制造</span>
+                            <span class="tech-tag">全局优化</span>
+                            <span class="tech-tag">稳定高效</span>
+                        </div>
+                        <!-- <a href="#" class="btn btn-outline">查看详细方案 →</a> -->
+                    </div>
+                    <div class="solution-image">
+                        <img src="assets/images/auto-solution-logistics.png" alt="智能物流解决方案">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 设备展示 -->
+    <section class="equipment-showcase" id="equipment">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心设备展示</h2>
+                <p>自主研发的高精度自动化装备</p>
+                <p>AGV/AMR移动机器人解决方案在工厂及仓库等领域的应用已经十分广泛。它们可以替代人工完成搬运、厂内运输，接驳等任务，可以大幅提升生产效率，降低业务成本，加速赋能企业数字化升级。</p>
+            </div>
+            
+            <div class="model-viewer-container">
+                <model-viewer data-src="assets/models/assembly-line.glb"
+                    ar
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width:100%; height:500px;">
+                    <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                        <div class="hotspot-tooltip">维度智能</div>
+                    </button>
+                </model-viewer>
+                
+                <div class="model-details">
+                    <h3>智能装配工作单元</h3>
+                    <ul class="tech-features">
+                        <li><i class="fas fa-robot"></i> 搭载 DOOSAN P3020 机器人</li>
+                        <li><i class="fas fa-eye"></i> Keyence CV-X系列视觉系统</li>
+                        <li><i class="fas fa-car"></i> Automatic Guided Vehicle</li>
+                        <li><i class="fas fa-network-wired"></i> PROFINET总线控制</li>
+                        <li><i class="fas fa-tachometer-alt"></i> 节拍时间≤35秒</li>
+                    </ul>
+                    
+                    <div class="tech-specs">
+                        <h4>技术参数：</h4>
+                        <table>
+                            <tr>
+                                <td>重复定位精度</td>
+                                <td>±0.02mm</td>
+                            </tr>
+                            <tr>
+                                <td>负载能力</td>
+                                <td>20kg</td>
+                            </tr>
+                            <tr>
+                                <td>防护等级</td>
+                                <td>IP54</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <!-- <button class="btn btn-primary" id="ar-view">
+                        <i class="fas fa-mobile-alt"></i> AR模式查看
+                    </button> -->
+                </div>
+            </div>
+            
+            <div class="equipment-grid">
+                <!-- 
+                <div class="equipment-card"
+                data-title="动力电池分拣设备" 
+                                data-category="动力电池"
+                                data-image="assets/images/Cell_Sorter.png"
+                                data-description="本设备用于对生产线上的动力电池进行高速、高精度的自动分拣。通过集成先进的视觉系统和机器人技术，能够快速识别电池的OCV/IR等参数，并将其分类至不同的料框中，极大提升了生产效率和产品一致性。"
+                                data-specs='{"节拍": "≤20秒/模组", "定位精度": "±0.1mm", "适用电池": "方形/软包电芯", "控制系统": "MELSEC PLC"}'>
+                    <div class="equipment-image">
+                        <img src="assets/images/Cell_Sorter.png" alt="合盘机图片">
+                    </div>
+                    <div class="equipment-info">
+                        <h3>动力电池分拣设备</h3>
+                        <div class="equipment-spec">
+                            <span><i class="fas fa-clock"></i> 节拍: ≤20秒/模组</span>
+                            <span><i class="fas fa-bullseye"></i> 精度: ±0.1mm</span>
+                        </div>
+                        <button class="btn btn-small view-detail-trigger">
+                            查看项目详情
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="equipment-card" 
+                                data-title="动力电池包装设备" 
+                                data-category="动力电池"
+                                data-image="assets/images/Cell_PACKING.png"
+                                data-description="本设备用于对生产线上的动力电池进行高速、高精度包装。通过集成先进的视觉系统和机器人技术，能够快速识别电池的OCV/IR等参数，并将其分类至不同的料框中，极大提升了生产效率和产品一致性。"
+                                data-specs='{"节拍": "≤20秒/模组", "定位精度": "±0.1mm", "适用电池": "方形/软包电芯", "控制系统": "MELSEC PLC"}'>
+                    <div class="equipment-image">
+                        <img src="assets/images/Cell_PACKING/Cell_PACKING.png" alt="CELL PACKING PHOTO">
+                    </div>
+                    <div class="equipment-info">
+                        <h3>动力电池包装设备</h3>
+                        <div class="equipment-spec">
+                            <span><i class="fas fa-clock"></i> 节拍: ≤20秒/模组</span>
+                            <span><i class="fas fa-bullseye"></i> 精度: ±0.1mm</span>
+                        </div>
+                        <button class="btn btn-small view-detail-trigger">
+                            查看项目详情
+                        </button>
+                    </div>
+                </div> 
+                -->
+                
+                <!-- 更多设备卡片... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section class="projects" id="cases">
+        <div class="container">
+            <div class="section-title">
+                <h2>成功案例</h2>
+                <p>服务全球知名制造企业</p>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active">全部</button>
+                <button class="filter-btn">汽车制造</button>
+                <button class="filter-btn">动力电池</button>
+                <button class="filter-btn">智能物流</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- 汽车制造 -->
+                <div class="project-card"
+                    data-title="泄露测试设备"
+                    data-category="汽车制造"
+                    data-image="assets/images/LEAK-TEST.png,assets/images/LEAK-TEST.png"
+                    data-description="为山东阿尔泰客户定制的8AT DCT变速箱壳体泄露测试设备。采用高精度压力传感器和差压法检测原理，能够快速准确地判断产品气密性，有效防止不良品流出。"
+                    data-specs='{"客户": "山东阿尔泰", "产品": "8AT DCT变速箱", "核心技术": "差压法泄露检测", "项目成果": "检测效率提升50%，误判率<0.1%"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/LEAK-TEST.png')">
+                        <div class="project-overlay">
+                            <h3 class="overlay-text">查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">汽车制造</span>
+                        <h3>泄露测试设备</h3>
+                        <p>客户:山东阿尔泰</p>
+                        <p>8AT DCT泄露LEAK测试</p>
+                        <!-- 注意：这里的按钮现在不需要data-*属性了，但为了统一样式和行为，可以保留class -->
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
+                
+                <div class="project-card"
+                    data-title="后驱组装测试线"
+                    data-category="汽车制造"
+                    data-image="assets/images/TM_TESTLINE/XLDL1.png,assets/images/TM_TESTLINE/XLDL2.png,assets/images/TM_TESTLINE/XLDL3.png"
+                    data-description="为馨联动力客户定制的变速箱注油,抽油,称重,激光刻印设备，采用高精度设备有效防止不良品流出。"
+                    data-specs='{"客户": "馨联动力", "产品": "后驱变速箱", "核心技术": "注油,抽油,称重,激光刻印", "项目成果": "误判率<0.1%"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/TM_TESTLINE/XLDL1.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">汽车制造</span>
+                        <h3>后驱组装测试线</h3>
+                        <p>客户:馨联动力</p>
+                        <p>实现产能提升40%，不良率降至0.05%</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+                <!-- 动力电池 -->
+                <div class="project-card"
+                    data-title="电芯分拣设备"
+                    data-category="动力电池"
+                    data-image="assets/images/Cell_Sorter.png"
+                    data-description="为SK 北电爱思特客户定制的电芯分拣设备。采用高精度压力传感器搭配伺服和视觉系统，能够快速准确地判断产品状态，有效防止不良品流出和提升后续工程节拍。"
+                    data-specs='{"客户": "SK 北电爱思特", "产品": "动力电池", "核心技术": "对料框内电池进行保留品挑出并且良品补框", "项目成果": "后续工程节拍缩减30%，误判率<0.1%"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/Cell_Sorter.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">动力电池</span>
+                        <h3>合盘机 CELL SORTER</h3>
+                        <p>客户:SK 北电爱思特 </p>
+                        <p>对料框内电池进行保留品挑出并且良品补框</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+                <div class="project-card"
+                    data-title="电芯装载设备"
+                    data-category="动力电池"
+                    data-image="assets/images/CELL_PACKING/CELL_PACKING.png,assets/images/CELL_PACKING/CELL_PACKING1.png,assets/images/CELL_PACKING/CELL_PACKING_VS.png,assets/images/CELL_PACKING/CELL_PACKING_SIZE.png"
+                    data-description="为SK北电爱思特客户定制的电芯装载设备。高精度距离传感器,测量设备,伺服,视觉系统,快速准确对电芯进行SIZE IV IR OCV检测合格品码垛并且确认摆放位 PPM10,有效防止不良品流出。"
+                    data-specs='{"客户": "SK北电爱思特", "产品": "动力电池", "核心技术": "SIZE IV IR OCV检测", "项目成果": "检测效率提升50%，误判率<0.1%"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/CELL_PACKING/CELL_PACKING.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">动力电池</span>
+                        <h3>电芯装载设备 CELL PACKING</h3>
+                        <p>客户:SK 北电爱思特</p>
+                        <p>对CELL进行SIZE IV IR OCV检测合格品码垛并且确认摆放位 PPM10</p>
+                        <a href="#" class="case-link-video case-link" 
+                        data-video-src="assets/videos/CELL_PACKING.mp4">
+                            查看项目视频 <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="project-card"
+                    data-title="电池检测设备"
+                    data-category="动力电池"
+                    data-image="assets/images/INCPECTION.png,assets/images/INCPECTION.png"
+                    data-description="为SK北电爱思特客户定制的电池检测设备。高精度距离传感器,测量设备,伺服,视觉系统,快速准确对电芯进行SIZE IV IR OCV检测合格品,有效防止不良品流出。"
+                    data-specs='{"客户": "SK北电爱思特", "产品": "动力电池", "核心技术": "电芯全自动INCPECTION设备", "项目成果": "检测效率提升50%，误判率<0.1%"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/INCPECTION.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">动力电池</span>
+                        <h3>电池检测设备</h3>
+                        <p>客户:SK 北电爱思特</p>
+                        <p>CELL全自动INCPECTION设备 PPM10</p>
+                        <a href="#" class="case-link-video case-link" 
+                        data-video-src="//player.bilibili.com/player.html?isOutside=true&aid=114727501956402&bvid=BV1PDKpzuEe6&cid=30642340149&p=1">
+                            查看项目视频 <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 智能物流 -->
+                <div class="project-card"
+                    data-title="JCI自动化仓储线"
+                    data-category="汽车制造"
+                    data-image="assets/images/TJ-JCI.png,assets/images/TJ-JCI.png"
+                    data-description="为天津JCI客户定制的自动化仓储系统。采用模块化、软件驱动的灵活自动存取系统 ASRS 实现仓储效率最大化,有效缩减人工成本"
+                    data-specs='{"客户": "天津JCI", "产品": "汽车零部件", "核心技术": "模块化、灵活和软件驱动的物料处理技术", "项目成果": "更高水平的空间利用率、更高的性能和更大的未来灵活性"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/TJ-JCI.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">智能物流</span>
+                        <h3>JCI自动化仓储线</h3>
+                        <p>客户:天津JCI</p>
+                        <p>自动化仓储系统,堆垛机双叉1台单叉4台</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
+                <!-- 更多案例卡片... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 客户见证 -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>客户见证</h2>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-item">
+                    <div class="client-logo">
+                        <img src="assets/images/client-mobis.png" alt="客户BEST公司Logo">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"维度智能提供的电池PACK生产线运行稳定，帮助我们实现了日产1200套的产能目标，产品合格率达到99.8%以上。"</p>
+                        <div class="client-info">
+                            <strong>张伟</strong>
+                            <span>SK 北电爱思特 生产总监</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 更多客户评价... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI计算器 -->
+    <section class="roi-calculator">
+        <div class="container">
+            <div class="calculator-container">
+                <div class="calculator-form">
+                    <h3>自动化改造投资回报计算器</h3>
+                    <form id="roiForm">
+                        <div class="form-group">
+                            <label>当前人工成本（万元/年）</label>
+                            <input type="number" id="labor-cost" min="0" step="10">
+                        </div>
+                        <div class="form-group">
+                            <label>当前日产量（件）</label>
+                            <input type="number" id="current-output" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label>目标日产量（件）</label>
+                            <input type="number" id="target-output" min="0">
+                        </div>
+                        <button type="button" class="btn btn-primary" id="calculate-btn">计算投资回报</button>
+                    </form>
+                </div>
+                <div class="calculator-result">
+                    <h4>预期年收益</h4>
+                    <div class="result-item">
+                        <span>人工成本节约</span>
+                        <strong id="labor-saving">0</strong> 万元
+                    </div>
+                    <div class="result-item">
+                        <span>产能提升收益</span>
+                        <strong id="output-gain">0</strong> 万元
+                    </div>
+                    <div class="result-total">
+                        <span>投资回收期</span>
+                        <strong id="roi-result">0</strong> 个月
+                    </div>
+                    <p class="disclaimer">*基于行业平均数据估算，实际收益可能因生产条件不同而有所差异</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区域 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>联系我们</h2>
+                <p>获取专属自动化解决方案</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>24小时服务支持</h3>
+                    <p>我们的工程师团队随时为您提供技术咨询和售后服务</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>总部地址</h4>
+                                <p>山东省日照市奎山街道现代路西徐州路中段</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4>服务热线</h4>
+                                <!-- <p>400-888-8888</p> -->
+                                <p>+86-186-2687-9899</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>商务联系</h4>
+                                <p>wang.wei@dimensiontech.cn</p>
+                                <!-- <p>support@dimensiontech.cn</p> -->
+                            </div>
+                        </div>
+                        <div id="map" style="height:300px;"></div>  <!-- Baidu Map -->
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>获取定制方案</h3>
+                    <form
+                        action="https://formspree.io/f/xeoklykp"
+                        class="fs-form"
+                        target="_top"
+                        method="POST"
+                        >
+                        <div class="form-group">
+                            <!-- 给 input 加上 name 属性，这非常重要！-->
+                            <input type="text" name="姓名" placeholder="您的姓名" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="电话" placeholder="联系电话" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="邮箱" placeholder="电子邮箱" required>
+                        </div>
+                        <div class="form-group">
+                            <select name="行业类型" required>
+                                <option value="">选择行业类型</option>
+                                <option>汽车制造</option>
+                                <option>动力电池</option>
+                                <option>器人集成</option>
+                                <option>AGV</option>
+                                <option>其他</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label>我感兴趣的服务 (可多选):</label>
+                            <input type="checkbox" name="interest" value="装配线"> 自动化装配线
+                            <input type="checkbox" name="interest" value="检测设备"> 智能检测设备
+                            <input type="checkbox" name="interest" value="机器人集成"> 机器人集成
+                        </div> -->
+                        <div class="form-group">
+                            <!-- <textarea name="需求描述" placeholder="请描述您的具体需求..." required></textarea> -->
+                            <textarea name="需求描述" placeholder="例如：我们需要一套用于新能源汽车电池模组的自动装配线，主要工艺包括电芯堆叠、激光焊接和EOL测试..." required></textarea>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-primary">提交需求</button> -->
+                        <button type="submit" class="btn btn-primary" id="submit-btn">提交需求</button>
+                        <p id="form-status"></p>
+                        <p class="privacy-notice" style="font-size:12px; color:#999; text-align:center; margin-top:10px;">我们承诺保护您的隐私，您的信息仅用于项目沟通。</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于维度智能</h4>
+                    <p>南阳维度智能装备有限公司是专业的工厂自动化解决方案提供商，致力于为制造企业提供智能化、数字化的生产装备和服务。</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">公司简介</a></li>
+                        <li><a href="#solutions">行业方案</a></li>
+                        <li><a href="#equipment">设备中心</a></li>
+                        <li><a href="#cases">成功案例</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>产品服务</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">自动化装配线</a></li>
+                        <li><a href="#">智能检测设备</a></li>
+                        <li><a href="#">工业机器人集成</a></li>
+                        <li><a href="#">MES系统集成</a></li>
+                        <li><a href="#">设备升级改造</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +86-186-2687-9899 </li>
+                        <li><i class="fas fa-envelope"></i> wang.wei@dimensiontech.cn</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 山东省日照市奎山街道现代路西徐州路中段</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <div class="footer-bottom">
+                <div class="certifications">
+                    <!-- <img src="assets/images/iso9001.png" alt="ISO9001认证">
+                    <img src="assets/images/ce.png" alt="CE认证"> -->
+                </div>
+                <p>&copy; 2023 南阳维度智能装备有限公司 版权所有 | 鲁ICP备123456789号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ▼▼▼ 模态框(Modal)结构 ▼▼▼ -->
+    <div id="detail-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="modal-body">
+                <!-- JS会在这里动态填充内容 -->
+            </div>
+        </div>
+    </div>
+    <!-- ▲▲▲ 模态框(Modal)结构结束 ▲▲▲ -->
+
+    <!-- ▼▼▼ 视频播放模态框(Modal)结构 ▼▼▼ -->
+    <div id="video-modal" class="modal">
+        <div class="video-modal-content">
+            <button class="modal-close-btn">×</button>
+            <div class="video-container">
+                <!-- 视频播放器将在这里动态插入 -->
+            </div>
+        </div>
+    </div>
+    <!-- ▲▲▲ 视频模态框结构结束 ▲▲▲ -->
+
+    <!-- MAP START -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=jjtkm0ChMcmzTPuHYhuFGCosVID54ixl"></script>
+    <script>
+    const map = new BMap.Map("map");
+    const point = new BMap.Point(119.462976,35.37343); // 日照工厂坐标
+    map.centerAndZoom(point, 15);
+    map.addOverlay(new BMap.Marker(point));
+    map.enableScrollWheelZoom();//启用滚轮放大缩小
+    
+    const marker = new BMap.Marker(point);  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+	const opts = {
+	    width : 200,     // 信息窗口宽度
+	    height: 100,     // 信息窗口高度
+	    title : "维度智能" , // 信息窗口标题
+	    message:"南阳维度智能装备有限公司"
+	}
+	const infoWindow = new BMap.InfoWindow("地址：山东省日照市奎山街道现代路西徐州路中段", opts);  // 创建信息窗口对象 
+	marker.addEventListener("click", function(){          
+		map.openInfoWindow(infoWindow, point); //开启信息窗口
+	}); 
+    </script>
+    <!-- MAP END -->
+
+    <!-- 调用Scripts -->
+     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script> <!-- 引入 Fancybox JS (确保在 main.js 之前) -->
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "IndustrialEquipment",
+      "name": "南阳维度智能装备有限公司",
+      "image": "https://www.we-do-smart.com/assets/images/logo.jpg",
+      "description": "专业提供汽车制造、动力电池等行业的智能装配线和自动化检测设备",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "山东省日照市奎山街道现代路西徐州路中段",
+        "addressRegion": "山东",
+        "postalCode": "276800",
+        "addressCountry": "CN"
+      },
+      "telephone": "+86-186-2687-9899"
+    }
+    </script>
+</body>
+</html>

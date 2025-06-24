@@ -1411,7 +1411,7 @@ model-viewer {
     
     .model-viewer-container {
         display: block;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
     
     .calculator-container {

@@ -1410,6 +1410,7 @@ model-viewer {
     }
     
     .model-viewer-container {
+        display: block;
         flex-direction: column;
     }
     

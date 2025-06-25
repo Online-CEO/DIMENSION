@@ -15,6 +15,10 @@
     --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
+html {
+  overflow-x: hidden; /* 禁止横向滚动 */
+}
+
 /* ===== LOGO样式 ==== */
 .logo {
     display: flex;         /* 1. 启用Flexbox布局 */

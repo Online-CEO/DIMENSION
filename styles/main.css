@@ -429,6 +429,85 @@ img {
     transform: scale(1.05);
 }
 
+/* ===== 发展历程 ===== */
+.timeline {
+  padding: 100px 0;
+  background-color: var(--light);
+  position: relative;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 175px;
+  bottom: 150px;
+  width: 4px;
+  background: var(--secondary);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-items {
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  width: 45%;
+}
+
+.timeline-left {
+  justify-content: flex-start;
+}
+
+.timeline-left .timeline-content {
+  margin-right: auto;
+}
+
+.timeline-right {
+  justify-content: flex-end;
+}
+
+.timeline-right .timeline-content {
+  margin-left: auto;
+}
+
+/* .timeline-item:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+} */
+
+.timeline-date {
+  position: absolute;
+  top: 50px;
+  width: auto;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--secondary);
+  color: white;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
 /* ===== 行业解决方案 ===== */
 .industry-solutions {
     padding: 100px 0;
@@ -1418,6 +1497,43 @@ model-viewer {
     .calculator-container {
         flex-direction: column;
     }
+
+    .timeline-right .timeline-content {
+        margin: 0 0 0 60px; /* 留出竖线和时间点的位置 */
+    }
+
+    /* 发展历程 */
+    .timeline:before {
+    left: 30px; /* 让竖线靠左，不遮挡内容 */
+    transform: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item:before {
+        top: -34px;
+        left: -10px;
+        transform: none;
+    }
+
+    .timeline-date {
+        top: 0px;
+        left: -20px;
+        width: auto;
+        position: relative;
+        left: auto;
+        transform: none;
+        margin: 10px 0;
+        align-self: flex-start;
+    }
+
+    .timeline-content {
+        width: 95%;
+        margin: 0 0 0 60px; /* 留出竖线和时间点的位置 */
+    }
 }
 
 @media (max-width: 768px) {
@@ -1493,6 +1609,23 @@ model-viewer {
     .client-logo {
         justify-content: center;
     }
+
+    /* 发展历程 */
+    .timeline:before {
+    left: 30px; 
+    transform: none;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .timeline-item:before {
+        left: -10px; /* 同样移到竖线位置 */
+        transform: none;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -1514,4 +1647,5 @@ model-viewer {
     .contact-form {
         padding: 25px;
     }
+
 }

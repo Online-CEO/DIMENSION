@@ -263,105 +263,243 @@
     </section>
 
     <!-- 设备展示 -->
-    <section class="equipment-showcase" id="equipment">
-        <div class="container">
-            <div class="section-title">
-                <h2>核心设备展示</h2>
-                <p>自主研发的高精度自动化装备</p>
-                <p>AGV/AMR移动机器人解决方案在工厂及仓库等领域的应用已经十分广泛。它们可以替代人工完成搬运、厂内运输，接驳等任务，可以大幅提升生产效率，降低业务成本，加速赋能企业数字化升级。</p>
-            </div>
-            
-            <div class="model-viewer-container">
-                <model-viewer data-src="assets/models/AGV.glb"
-                    ar
-                    camera-controls
-                    shadow-intensity="1"
-                    style="width:100%; height:500px;">
-                    <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
-                        <div class="hotspot-tooltip">维度智能</div>
-                    </button>
-                </model-viewer>
-                
-                <div class="model-details">
-                    <h3>智能装配工作单元</h3>
-                    <ul class="tech-features">
-                        <li><i class="fas fa-robot"></i> 搭载 DOOSAN A920 协作机器人</li>
-                        <li><i class="fas fa-eye"></i> 梅卡曼德ZR-NANO-ULTRA-JN 系列3D视觉系统</li>
-                        <li><i class="fas fa-car"></i> 仙工AGV</li>
-                        <li><i class="fas fa-network-wired"></i> PROFINET总线控制</li>
-                        <li><i class="fas fa-tachometer-alt"></i> 节拍时间≤45秒</li>
-                    </ul>
-                    
-                    <div class="tech-specs">
-                        <h4>技术参数：</h4>
-                        <table>
-                            <tr>
-                                <td>重复定位精度</td>
-                                <td>±0.02mm</td>
-                            </tr>
-                            <tr>
-                                <td>负载能力</td>
-                                <td>AGV:300kg，机械手10kg</td>
-                            </tr>
-                            <tr>
-                                <td>防护等级</td>
-                                <td>IP54</td>
-                            </tr>
-                        </table>
-                    </div>
-                    
-                    <!-- <button class="btn btn-primary" id="ar-view">
-                        <i class="fas fa-mobile-alt"></i> AR模式查看
-                    </button> -->
-                </div>
-            </div>
-            
-           <div class="model-viewer-container">
-                <model-viewer data-src="assets/models/AGV.glb"
-                    ar
-                    camera-controls
-                    shadow-intensity="1"
-                    style="width:100%; height:500px;">
-                    <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
-                        <div class="hotspot-tooltip">维度智能</div>
-                    </button>
-                </model-viewer>
-                
-                <div class="model-details">
-                    <h3>智能装配工作单元</h3>
-                    <ul class="tech-features">
-                        <li><i class="fas fa-robot"></i> TPC</li>
-                        <li><i class="fas fa-eye"></i> KEYENCE/COGNEX/</li>                        
-                        <li><i class="fas fa-network-wired"></i> CC-LINK</li>
-                        <li><i class="fas fa-tachometer-alt"></i> PPM10</li>
-                    </ul>
-                    
-                    <div class="tech-specs">
-                        <h4>技术参数：</h4>
-                        <table>
-                            <tr>
-                                <td>功能内容</td>
-                                <td>IV/IR/OCV/SIZE/正反面拍照/码垛位置尺寸/码垛前后拍照保存</td>
-                            </tr>
-                            <tr>
-                                <td>上位机</td>
-                                <td>C#开发;数据库MY-SQL;NAS存储</td>
-                            </tr>
-                            <tr>
-                                <td>扩展能力</td>
-                                <td>可以接入双投入口,PPM22</td>
-                            </tr>
-                        </table>
-                    </div>
-                    
-                    <!-- <button class="btn btn-primary" id="ar-view">
-                        <i class="fas fa-mobile-alt"></i> AR模式查看
-                    </button> -->
-                </div>
-            </div>
-            
+<section class="equipment-showcase" id="equipment">
+    <div class="container">
+        <div class="section-title">
+            <h2>核心设备展示</h2>
+            <p>自主研发的高精度自动化装备</p>
+            <p>AGV/AMR移动机器人解决方案在工厂及仓库等领域的应用已经十分广泛。它们可以替代人工完成搬运、厂内运输，接驳等任务，可以大幅提升生产效率，降低业务成本，加速赋能企业数字化升级。</p>
         </div>
-    </section>
+        
+        <div class="equipment-carousel">
+            <button class="carousel-button prev" aria-label="上一个设备">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="carousel-container">
+                <!-- 第一个设备 -->
+                <div class="carousel-slide active">
+                    <div class="model-viewer-container">
+                        <model-viewer data-src="assets/models/AGV.glb"
+                            ar
+                            camera-controls
+                            shadow-intensity="1"
+                            style="width:100%; height:500px;">
+                            <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                                <div class="hotspot-tooltip">维度智能</div>
+                            </button>
+                        </model-viewer>
+                        
+                        <div class="model-details">
+                            <h3>智能装配工作单元</h3>
+                            <ul class="tech-features">
+                                <li><i class="fas fa-robot"></i> 搭载 DOOSAN A920 协作机器人</li>
+                                <li><i class="fas fa-eye"></i> 梅卡曼德ZR-NANO-ULTRA-JN 系列3D视觉系统</li>
+                                <li><i class="fas fa-car"></i> 仙工AGV</li>
+                                <li><i class="fas fa-network-wired"></i> PROFINET总线控制</li>
+                                <li><i class="fas fa-tachometer-alt"></i> 节拍时间≤45秒</li>
+                            </ul>
+                            
+                            <div class="tech-specs">
+                                <h4>技术参数：</h4>
+                                <table>
+                                    <tr>
+                                        <td>重复定位精度</td>
+                                        <td>±0.02mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>负载能力</td>
+                                        <td>AGV:300kg，机械手10kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>防护等级</td>
+                                        <td>IP54</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第二个设备 -->
+                <div class="carousel-slide">
+                    <div class="model-viewer-container">
+                        <model-viewer data-src="assets/models/AGV.glb"
+                            ar
+                            camera-controls
+                            shadow-intensity="1"
+                            style="width:100%; height:500px;">
+                            <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                                <div class="hotspot-tooltip">维度智能</div>
+                            </button>
+                        </model-viewer>
+                        
+                        <div class="model-details">
+                            <h3>智能装配工作单元</h3>
+                            <ul class="tech-features">
+                                <li><i class="fas fa-robot"></i> TPC</li>
+                                <li><i class="fas fa-eye"></i> KEYENCE/COGNEX/</li>                        
+                                <li><i class="fas fa-network-wired"></i> CC-LINK</li>
+                                <li><i class="fas fa-tachometer-alt"></i> PPM10</li>
+                            </ul>
+                            
+                            <div class="tech-specs">
+                                <h4>技术参数：</h4>
+                                <table>
+                                    <tr>
+                                        <td>功能内容</td>
+                                        <td>IV/IR/OCV/SIZE/正反面拍照/码垛位置尺寸/码垛前后拍照保存</td>
+                                    </tr>
+                                    <tr>
+                                        <td>上位机</td>
+                                        <td>C#开发;数据库MY-SQL;NAS存储</td>
+                                    </tr>
+                                    <tr>
+                                        <td>扩展能力</td>
+                                        <td>可以接入双投入口,PPM22</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-button next" aria-label="下一个设备">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- 指示器 -->
+            <div class="carousel-indicators">
+                <button class="indicator active" aria-label="显示设备1"></button>
+                <button class="indicator" aria-label="显示设备2"></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .equipment-carousel {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .carousel-container {
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    
+    .carousel-slide {
+        min-width: 100%;
+        display: none;
+    }
+    
+    .carousel-slide.active {
+        display: block;
+    }
+    
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .carousel-button.prev {
+        left: 20px;
+    }
+    
+    .carousel-button.next {
+        right: 20px;
+    }
+    
+    .carousel-button:hover {
+        background: rgba(0,0,0,0.8);
+    }
+    
+    .carousel-indicators {
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    
+    .carousel-indicators .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ccc;
+        border: none;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    
+    .carousel-indicators .indicator.active {
+        background: #333;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carousel = document.querySelector('.equipment-carousel');
+        const container = carousel.querySelector('.carousel-container');
+        const slides = carousel.querySelectorAll('.carousel-slide');
+        const prevBtn = carousel.querySelector('.carousel-button.prev');
+        const nextBtn = carousel.querySelector('.carousel-button.next');
+        const indicators = carousel.querySelectorAll('.indicator');
+        
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        
+        function updateCarousel() {
+            // 更新slide显示状态
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentIndex);
+            });
+            
+            // 更新指示器状态
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+        
+        // 按钮事件
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        // 指示器事件
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+        
+        // 可选：自动轮播
+        // setInterval(nextSlide, 5000);
+    });
+</script>
 
     <!-- 成功案例 -->
     <section class="projects" id="cases">

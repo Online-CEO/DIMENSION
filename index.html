@@ -280,7 +280,7 @@
                 <!-- 第一个设备 -->
                 <div class="carousel-slide active">
                     <div class="model-viewer-container">
-                        <model-viewer data-src="assets/models/CellPacking.glb"
+                        <model-viewer data-src="assets/models/AGV.glb"
                             ar
                             camera-controls
                             shadow-intensity="1"
@@ -324,7 +324,7 @@
                 <!-- 第二个设备 -->
                 <div class="carousel-slide">
                     <div class="model-viewer-container">
-                        <model-viewer data-src="assets/models/AGV.glb"
+                        <model-viewer data-src="assets/models/CellPacking.glb"
                             ar
                             camera-controls
                             shadow-intensity="1"
@@ -403,8 +403,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(0,0,0,0.5);
-        color: white;
+        background: rgba(255,255,255,0.7); /* 改背景 */
+        color: #333; /* 改箭头颜色 */
         border: none;
         padding: 15px;
         cursor: pointer;
@@ -418,15 +418,16 @@
     }
     
     .carousel-button.prev {
-        left: 20px;
+        left: 10px;
     }
     
     .carousel-button.next {
-        right: 20px;
+        right: 10px;
     }
     
     .carousel-button:hover {
-        background: rgba(0,0,0,0.8);
+        background: rgba(255,255,255,0.9); /* 悬停时 */
+        color: #000; /* 悬停时箭头 */
     }
     
     .carousel-indicators {
@@ -463,12 +464,18 @@
         const totalSlides = slides.length;
         
         function updateCarousel() {
-            // 更新slide显示状态
             slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === currentIndex);
+                const shouldShow = index === currentIndex;
+                slide.classList.toggle('active', shouldShow);
+                
+                if(shouldShow) {
+                    const modelViewer = slide.querySelector('model-viewer');
+                    if(modelViewer && modelViewer.dataset.src) {
+                        modelViewer.src = modelViewer.dataset.src;
+                    }
+                }
             });
             
-            // 更新指示器状态
             indicators.forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentIndex);
             });

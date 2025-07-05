@@ -4,22 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>南阳维度智能装备有限公司 | 工厂自动化解决方案专家</title>
-        <style>
-        /* 精准控制 - 只影响这个特定段落 */
-        .device-description > .application-desc {
-            width: 300px;               /* 固定宽度 */
-            max-width: 100%;           /* 响应式限制 */
-            overflow-wrap: break-word;  /* 自动换行 */
-            white-space: normal;       /* 正常换行 */
-            padding: 10px;
-            margin: 0;                 /* 移除默认外边距 */
-            box-sizing: border-box;    /* 包含padding在宽度内 */
-            
-            /* 可选：添加滚动条（如果内容可能超长） 
-             overflow-y: auto;
-            max-height: 200px;*/
-        }
-    </style>
     
     <!-- 浏览器标签图标 -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/LOGO/favicon-32x32.png">
@@ -279,87 +263,89 @@
     </section>
 
     <!-- 设备展示 -->
-<section class="equipment-showcase" id="equipment">
-    <div class="container">
-        <div class="section-title">
-            <h2>核心设备展示</h2>
-        </div>
-        
-        <div class="equipment-carousel">
-            <button class="carousel-button prev" aria-label="上一个设备">
-                <i class="fas fa-chevron-left"></i>
-            </button>
+    <section class="equipment-showcase" id="equipment">
+        <div class="container">
+            <div class="section-title">
+                <h2>核心设备展示</h2>
+                <!-- 修改点1：新增动态描述区域（移动到标题下方） -->
+                <div class="dynamic-description">
+                    <p class="tech-desc">设备详细介绍1</p>
+                    <p class="application-desc">设备详细介绍2...</p>
+                </div>
+            </div>
             
-            <div class="carousel-container">
-                <!-- 第一个设备 -->
-                <div class="carousel-slide active">
-                    <div class="model-viewer-container">
-                        <model-viewer data-src="assets/models/AGV.glb"
-                            ar
-                            camera-controls
-                            shadow-intensity="1"
-                            style="width:100%; height:500px;">
-                            <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
-                                <div class="hotspot-tooltip">维度智能</div>
-                            </button>
-                        </model-viewer>
-                        
-                         <!-- 设备专属描述 -->
-                        <div class="device-description">
-                                <h3>CNC自动上下料设备</h3>
-                                <p class="tech-desc">100%</p>
-                                <p class="application-desc">CNC自动上下料设备采用先进的技术，实现一台机器人为8台CNC设备自动上下料，可切换30个型号，提升作业效率，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型，是CNC车间升级转型、提高效率和安全性的优质设备。</p>
+            <div class="equipment-carousel">
+                <!-- 原有按钮保持不变 -->
+                <button class="carousel-button prev" aria-label="上一个设备">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
                 
-                            <div class="model-details">
-                                <h3>智能装配工作单元</h3>
-                                <ul class="tech-features">
-                                    <li><i class="fas fa-robot"></i> 搭载 DOOSAN A920 协作机器人</li>
-                                    <li><i class="fas fa-eye"></i> 梅卡曼德ZR-NANO-ULTRA-JN 系列3D视觉系统</li>
-                                    <li><i class="fas fa-car"></i> 仙工AGV</li>
-                                    <li><i class="fas fa-network-wired"></i> PROFINET总线控制</li>
-                                    <li><i class="fas fa-tachometer-alt"></i> 节拍时间≤45秒</li>
-                                </ul>
-                                
-                                <div class="tech-specs">
-                                    <h4>技术参数：</h4>
-                                    <table>
-                                        <tr>
-                                            <td>重复定位精度</td>
-                                            <td>±0.02mm</td>
-                                        </tr>
-                                        <tr>
-                                            <td>负载能力</td>
-                                            <td>AGV:300kg，机械手10kg</td>
-                                        </tr>
-                                        <tr>
-                                            <td>防护等级</td>
-                                            <td>IP54</td>
-                                        </tr>
-                                    </table>
+                <div class="carousel-container">
+                    <!-- 第一个设备 -->
+                    <!-- 修改点2：添加data-tech-desc和data-app-desc属性 -->
+                    <div class="carousel-slide active" data-tech-desc="100%完全自主研发" data-app-desc="CNC自动上下料设备采用先进的技术，实现一台机器人为8台CNC设备自动上下料，可切换30个型号，提升作业效率，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型，是CNC车间升级转型、提高效率和安全性的优质设备。">
+                        <div class="model-viewer-container">
+                            <model-viewer data-src="assets/models/AGV.glb"
+                                ar
+                                camera-controls
+                                shadow-intensity="1"
+                                style="width:100%; height:500px;">
+                                <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                                    <div class="hotspot-tooltip">维度智能</div>
+                                </button>
+                            </model-viewer>
+                            
+                            <div class="device-description">
+                                <h3>CNC自动上下料设备</h3>
+                                <!-- 修改点3：移除原来的描述段落 -->
+                                <div class="model-details">
+                                    <h3>智能装配工作单元</h3>
+                                    <ul class="tech-features">
+                                        <li><i class="fas fa-robot"></i> 搭载 DOOSAN A920 协作机器人</li>
+                                        <li><i class="fas fa-eye"></i> 梅卡曼德ZR-NANO-ULTRA-JN 系列3D视觉系统</li>
+                                        <li><i class="fas fa-car"></i> 仙工AGV</li>
+                                        <li><i class="fas fa-network-wired"></i> PROFINET总线控制</li>
+                                        <li><i class="fas fa-tachometer-alt"></i> 节拍时间≤45秒</li>
+                                    </ul>
+                                    
+                                    <div class="tech-specs">
+                                        <h4>技术参数：</h4>
+                                        <table>
+                                            <tr>
+                                                <td>重复定位精度</td>
+                                                <td>±0.02mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>负载能力</td>
+                                                <td>AGV:300kg，机械手10kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>防护等级</td>
+                                                <td>IP54</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                             <ul class="tech-features">...</ul>
-                             <div class="tech-specs">...</div>
-                         </div>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- 第二个设备 -->
-                <div class="carousel-slide">
-                    <div class="model-viewer-container">
-                        <model-viewer data-src="assets/models/CellPacking.glb"
-                            ar
-                            camera-controls
-                            shadow-intensity="1"
-                            style="width:100%; height:500px;">
-                            <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
-                                <div class="hotspot-tooltip">维度智能</div>
-                            </button>
-                        </model-viewer>
-                        <div class="device-description">
-                            <h3>电芯PAKCING</h3>
-                            <p class="tech-desc">自主研发的视觉识别包装系统</p>
-                            <p class="application-desc">智能包装解决方案在生产线末端的应用，实现自动检测、分类和码垛...</p>
+                    
+                    <!-- 第二个设备 -->
+                    <!-- 修改点4：添加data-tech-desc和data-app-desc属性 -->
+                    <div class="carousel-slide" data-tech-desc="自主研发的视觉识别包装系统" data-app-desc="智能包装解决方案在生产线末端的应用，实现自动检测、分类和码垛...">
+                        <div class="model-viewer-container">
+                            <model-viewer data-src="assets/models/CellPacking.glb"
+                                ar
+                                camera-controls
+                                shadow-intensity="1"
+                                style="width:100%; height:500px;">
+                                <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                                    <div class="hotspot-tooltip">维度智能</div>
+                                </button>
+                            </model-viewer>
+                            <div class="device-description">
+                                <h3>电芯PAKCING</h3>
+                                <!-- 修改点5：移除原来的描述段落 -->
                                 <div class="model-details">
                                     <h3>智能装配工作单元</h3>
                                     <ul class="tech-features">
@@ -374,168 +360,198 @@
                                         <table>
                                             <tr>
                                                 <td>功能内容</td>
-                                                <td>IV/IR/OCV/SIZE/正反面拍照/码垛位置尺寸/码垛前后拍照保存</td>
+                                                <td>IV/IR/OCV/SIZE</td>
                                             </tr>
                                             <tr>
                                                 <td>上位机</td>
-                                                <td>C#开发;数据库MY-SQL;NAS存储</td>
+                                                <td>C#;MY-SQL;NAS</td>
                                             </tr>
                                             <tr>
                                                 <td>扩展能力</td>
-                                                <td>可以接入双投入口,PPM22</td>
+                                                <td>可以双投入口,PPM22</td>
                                             </tr>
                                         </table>
                                     </div>
                                 </div>
-                            <ul class="tech-features">...</ul>
-                            <div class="tech-specs">...</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <button class="carousel-button next" aria-label="下一个设备">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-            
-            <!-- 指示器 -->
-            <div class="carousel-indicators">
-                <button class="indicator active" aria-label="显示设备1"></button>
-                <button class="indicator" aria-label="显示设备2"></button>
+                
+                <!-- 原有按钮保持不变 -->
+                <button class="carousel-button next" aria-label="下一个设备">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- 原有指示器保持不变 -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" aria-label="显示设备1"></button>
+                    <button class="indicator" aria-label="显示设备2"></button>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<style>
-    .equipment-carousel {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-    }
-    
-    .carousel-container {
-        display: flex;
-        transition: transform 0.5s ease;
-    }
-    
-    .carousel-slide {
-        min-width: 100%;
-        display: none;
-    }
-    
-    .carousel-slide.active {
-        display: block;
-    }
-    
-    .carousel-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255,255,255,0.7); /* 改背景 */
-        color: #333; /* 改箭头颜色 */
-        border: none;
-        padding: 15px;
-        cursor: pointer;
-        z-index: 10;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .carousel-button.prev {
-        left: 10px;
-    }
-    
-    .carousel-button.next {
-        right: 10px;
-    }
-    
-    .carousel-button:hover {
-        background: rgba(255,255,255,0.9); /* 悬停时 */
-        color: #000; /* 悬停时箭头 */
-    }
-    
-    .carousel-indicators {
-        display: flex;
-        justify-content: center;
-        padding: 20px 0;
-    }
-    
-    .carousel-indicators .indicator {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: #ccc;
-        border: none;
-        margin: 0 5px;
-        cursor: pointer;
-    }
-    
-    .carousel-indicators .indicator.active {
-        background: #333;
-    }
-</style>
+    <style>
+        /* 原有样式完全保持不变 */
+        .equipment-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            display: none;
+        }
+        
+        .carousel-slide.active {
+            display: block;
+        }
+        
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.7);
+            color: #333;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-button.prev {
+            left: 10px;
+        }
+        
+        .carousel-button.next {
+            right: 10px;
+        }
+        
+        .carousel-button:hover {
+            background: rgba(255,255,255,0.9);
+            color: #000;
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        
+        .carousel-indicators .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .carousel-indicators .indicator.active {
+            background: #333;
+        }
+        
+        /* 修改点6：新增动态描述区域的样式 */
+        .dynamic-description {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .tech-desc {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .application-desc {
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const carousel = document.querySelector('.equipment-carousel');
-        const container = carousel.querySelector('.carousel-container');
-        const slides = carousel.querySelectorAll('.carousel-slide');
-        const prevBtn = carousel.querySelector('.carousel-button.prev');
-        const nextBtn = carousel.querySelector('.carousel-button.next');
-        const indicators = carousel.querySelectorAll('.indicator');
-        
-        let currentIndex = 0;
-        const totalSlides = slides.length;
-        
-        function updateCarousel() {
-            slides.forEach((slide, index) => {
-                const shouldShow = index === currentIndex;
-                slide.classList.toggle('active', shouldShow);
-                
-                if(shouldShow) {
-                    const modelViewer = slide.querySelector('model-viewer');
-                    if(modelViewer && modelViewer.dataset.src) {
-                        modelViewer.src = modelViewer.dataset.src;
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 原有选择器保持不变
+            const carousel = document.querySelector('.equipment-carousel');
+            const container = carousel.querySelector('.carousel-container');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const prevBtn = carousel.querySelector('.carousel-button.prev');
+            const nextBtn = carousel.querySelector('.carousel-button.next');
+            const indicators = carousel.querySelectorAll('.indicator');
+            
+            // 修改点7：新增获取描述元素
+            const techDesc = document.querySelector('.tech-desc');
+            const appDesc = document.querySelector('.application-desc');
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            
+            function updateCarousel() {
+                slides.forEach((slide, index) => {
+                    const shouldShow = index === currentIndex;
+                    slide.classList.toggle('active', shouldShow);
+                    
+                    if(shouldShow) {
+                        // 修改点8：新增描述更新逻辑
+                        techDesc.textContent = slide.dataset.techDesc;
+                        appDesc.textContent = slide.dataset.appDesc;
+                        
+                        // 原有模型加载逻辑保持不变
+                        const modelViewer = slide.querySelector('model-viewer');
+                        if(modelViewer && modelViewer.dataset.src) {
+                            modelViewer.src = modelViewer.dataset.src;
+                        }
                     }
-                }
-            });
+                });
+                
+                // 原有指示器更新逻辑保持不变
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // 原有切换函数保持不变
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+            
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+            
+            // 原有事件监听保持不变
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
             
             indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentIndex);
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
             });
-        }
-        
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalSlides;
+            
+            // 修改点9：确保初始加载时显示第一个设备的描述
             updateCarousel();
-        }
-        
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-        
-        // 按钮事件
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-        
-        // 指示器事件
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentIndex = index;
-                updateCarousel();
-            });
         });
-        
-        // 可选：自动轮播
-        // setInterval(nextSlide, 50000);
-    });
-</script>
+    </script>
 
     <!-- 成功案例 -->
     <section class="projects" id="cases">

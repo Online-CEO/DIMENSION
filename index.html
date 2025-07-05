@@ -316,53 +316,50 @@
                 </div>
             </div>
             
-            <div class="equipment-grid">
-                <!-- 
-                <div class="equipment-card"
-                data-title="动力电池分拣设备" 
-                                data-category="动力电池"
-                                data-image="assets/images/Cell_Sorter.png"
-                                data-description="本设备用于对生产线上的动力电池进行高速、高精度的自动分拣。通过集成先进的视觉系统和机器人技术，能够快速识别电池的OCV/IR等参数，并将其分类至不同的料框中，极大提升了生产效率和产品一致性。"
-                                data-specs='{"节拍": "≤20秒/模组", "定位精度": "±0.1mm", "适用电池": "方形/软包电芯", "控制系统": "MELSEC PLC"}'>
-                    <div class="equipment-image">
-                        <img src="assets/images/Cell_Sorter.png" alt="合盘机图片">
+           <div class="model-viewer-container">
+                <model-viewer data-src="assets/models/CellPacking.glb"
+                    ar
+                    camera-controls
+                    shadow-intensity="1"
+                    style="width:100%; height:500px;">
+                    <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                        <div class="hotspot-tooltip">维度智能</div>
+                    </button>
+                </model-viewer>
+                
+                <div class="model-details">
+                    <h3>智能装配工作单元</h3>
+                    <ul class="tech-features">
+                        <li><i class="fas fa-robot"></i> TPC</li>
+                        <li><i class="fas fa-eye"></i> KEYENCE/COGNEX/</li>                        
+                        <li><i class="fas fa-network-wired"></i> CC-LINK</li>
+                        <li><i class="fas fa-tachometer-alt"></i> PPM10</li>
+                    </ul>
+                    
+                    <div class="tech-specs">
+                        <h4>技术参数：</h4>
+                        <table>
+                            <tr>
+                                <td>功能内容</td>
+                                <td>IV/IR/OCV/SIZE/正反面拍照/码垛位置尺寸/码垛前后拍照保存</td>
+                            </tr>
+                            <tr>
+                                <td>上位机</td>
+                                <td>C#开发;数据库MY-SQL;NAS存储</td>
+                            </tr>
+                            <tr>
+                                <td>扩展能力</td>
+                                <td>可以接入双投入口,PPM22</td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="equipment-info">
-                        <h3>动力电池分拣设备</h3>
-                        <div class="equipment-spec">
-                            <span><i class="fas fa-clock"></i> 节拍: ≤20秒/模组</span>
-                            <span><i class="fas fa-bullseye"></i> 精度: ±0.1mm</span>
-                        </div>
-                        <button class="btn btn-small view-detail-trigger">
-                            查看项目详情
-                        </button>
-                    </div>
+                    
+                    <!-- <button class="btn btn-primary" id="ar-view">
+                        <i class="fas fa-mobile-alt"></i> AR模式查看
+                    </button> -->
                 </div>
-                
-                <div class="equipment-card" 
-                                data-title="动力电池包装设备" 
-                                data-category="动力电池"
-                                data-image="assets/images/Cell_PACKING.png"
-                                data-description="本设备用于对生产线上的动力电池进行高速、高精度包装。通过集成先进的视觉系统和机器人技术，能够快速识别电池的OCV/IR等参数，并将其分类至不同的料框中，极大提升了生产效率和产品一致性。"
-                                data-specs='{"节拍": "≤20秒/模组", "定位精度": "±0.1mm", "适用电池": "方形/软包电芯", "控制系统": "MELSEC PLC"}'>
-                    <div class="equipment-image">
-                        <img src="assets/images/Cell_PACKING/Cell_PACKING.png" alt="CELL PACKING PHOTO">
-                    </div>
-                    <div class="equipment-info">
-                        <h3>动力电池包装设备</h3>
-                        <div class="equipment-spec">
-                            <span><i class="fas fa-clock"></i> 节拍: ≤20秒/模组</span>
-                            <span><i class="fas fa-bullseye"></i> 精度: ±0.1mm</span>
-                        </div>
-                        <button class="btn btn-small view-detail-trigger">
-                            查看项目详情
-                        </button>
-                    </div>
-                </div> 
-                -->
-                
-                <!-- 更多设备卡片... -->
             </div>
+            
         </div>
     </section>
 

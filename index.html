@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>南阳维度智能装备有限公司 | 工厂自动化解决方案专家</title>
-    
+ 
+
+
     <!-- 浏览器标签图标 -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/LOGO/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/LOGO/favicon-16x16.png">
@@ -267,7 +269,6 @@
         <div class="container">
             <div class="section-title">
                 <h2>核心设备展示</h2>
-                <!-- 修改点1：新增动态描述区域（移动到标题下方） -->
                 <div class="dynamic-description">
                     <p class="tech-desc">设备详细介绍1</p>
                     <p class="application-desc">设备详细介绍2...</p>
@@ -282,10 +283,10 @@
                 
                 <div class="carousel-container">
                     <!-- 第一个设备 -->
-                    <!-- 修改点2：添加data-tech-desc和data-app-desc属性 -->
                     <div class="carousel-slide active" data-tech-desc="100%完全自主研发" data-app-desc="CNC自动上下料设备采用先进的技术，实现一台机器人为8台CNC设备自动上下料，可切换30个型号，提升作业效率，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型，是CNC车间升级转型、提高效率和安全性的优质设备。">
                         <div class="model-viewer-container">
                             <model-viewer data-src="assets/models/AGV.glb"
+                                
                                 ar
                                 camera-controls
                                 shadow-intensity="1"
@@ -297,7 +298,6 @@
                             
                             <div class="device-description">
                                 <h3>CNC自动上下料设备</h3>
-                                <!-- 修改点3：移除原来的描述段落 -->
                                 <div class="model-details">
                                     <h3>智能装配工作单元</h3>
                                     <ul class="tech-features">
@@ -320,8 +320,8 @@
                                                 <td>AGV:300kg，机械手10kg</td>
                                             </tr>
                                             <tr>
-                                                <td>防护等级</td>
-                                                <td>IP54</td>
+                                                <td>控制系统</td>
+                                                <td>西门子PLC+PC</td>
                                             </tr>
                                         </table>
                                     </div>
@@ -331,8 +331,7 @@
                     </div>
                     
                     <!-- 第二个设备 -->
-                    <!-- 修改点4：添加data-tech-desc和data-app-desc属性 -->
-                    <div class="carousel-slide" data-tech-desc="自主研发的视觉识别包装系统" data-app-desc="智能包装解决方案在生产线末端的应用，实现自动检测、分类和码垛...">
+                    <div class="carousel-slide" data-tech-desc="100%完全自主研发" data-app-desc="软包三元锂电池检测与码垛系统，支持检测功能灵活扩展，包括IV/IR/OCV、电芯正反面拍照、极耳与码垛位置检测、TRAY及电池拍照，自动排出NG及MES不良品。数据实时记录并存储至NAS，支持追溯。可扩展至双投入口，最高产能24PPM。">
                         <div class="model-viewer-container">
                             <model-viewer data-src="assets/models/CellPacking.glb"
                                 ar
@@ -345,14 +344,14 @@
                             </model-viewer>
                             <div class="device-description">
                                 <h3>电芯PAKCING</h3>
-                                <!-- 修改点5：移除原来的描述段落 -->
                                 <div class="model-details">
                                     <h3>智能装配工作单元</h3>
                                     <ul class="tech-features">
                                         <li><i class="fas fa-robot"></i> TPC</li>
-                                        <li><i class="fas fa-eye"></i> KEYENCE/COGNEX/</li>                        
+                                        <li><i class="fas fa-eye"></i> KEYENCE</li>  
+                                        <li><i class="fa-solid fa-barcode"></i> COGNEX</li>                  
                                         <li><i class="fas fa-network-wired"></i> CC-LINK</li>
-                                        <li><i class="fas fa-tachometer-alt"></i> PPM10</li>
+                                        <li><i class="fas fa-tachometer-alt"></i> 单投入口PPM12</li>
                                     </ul>
                                     
                                     <div class="tech-specs">
@@ -367,8 +366,8 @@
                                                 <td>C#;MY-SQL;NAS</td>
                                             </tr>
                                             <tr>
-                                                <td>扩展能力</td>
-                                                <td>可以双投入口,PPM22</td>
+                                                <td>控制系统</td>
+                                                <td>三菱PLC+PC</td>
                                             </tr>
                                         </table>
                                     </div>
@@ -378,12 +377,10 @@
                     </div>
                 </div>
                 
-                <!-- 原有按钮保持不变 -->
                 <button class="carousel-button next" aria-label="下一个设备">
                     <i class="fas fa-chevron-right"></i>
                 </button>
                 
-                <!-- 原有指示器保持不变 -->
                 <div class="carousel-indicators">
                     <button class="indicator active" aria-label="显示设备1"></button>
                     <button class="indicator" aria-label="显示设备2"></button>
@@ -393,7 +390,6 @@
     </section>
 
     <style>
-        /* 原有样式完全保持不变 */
         .equipment-carousel {
             position: relative;
             width: 100%;
@@ -465,7 +461,6 @@
             background: #333;
         }
         
-        /* 修改点6：新增动态描述区域的样式 */
         .dynamic-description {
             margin-bottom: 20px;
             text-align: center;
@@ -487,7 +482,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // 原有选择器保持不变
+
             const carousel = document.querySelector('.equipment-carousel');
             const container = carousel.querySelector('.carousel-container');
             const slides = carousel.querySelectorAll('.carousel-slide');
@@ -495,7 +490,6 @@
             const nextBtn = carousel.querySelector('.carousel-button.next');
             const indicators = carousel.querySelectorAll('.indicator');
             
-            // 修改点7：新增获取描述元素
             const techDesc = document.querySelector('.tech-desc');
             const appDesc = document.querySelector('.application-desc');
             
@@ -508,11 +502,11 @@
                     slide.classList.toggle('active', shouldShow);
                     
                     if(shouldShow) {
-                        // 修改点8：新增描述更新逻辑
+
                         techDesc.textContent = slide.dataset.techDesc;
                         appDesc.textContent = slide.dataset.appDesc;
                         
-                        // 原有模型加载逻辑保持不变
+
                         const modelViewer = slide.querySelector('model-viewer');
                         if(modelViewer && modelViewer.dataset.src) {
                             modelViewer.src = modelViewer.dataset.src;
@@ -520,13 +514,11 @@
                     }
                 });
                 
-                // 原有指示器更新逻辑保持不变
                 indicators.forEach((indicator, index) => {
                     indicator.classList.toggle('active', index === currentIndex);
                 });
             }
             
-            // 原有切换函数保持不变
             function nextSlide() {
                 currentIndex = (currentIndex + 1) % totalSlides;
                 updateCarousel();
@@ -537,7 +529,6 @@
                 updateCarousel();
             }
             
-            // 原有事件监听保持不变
             nextBtn.addEventListener('click', nextSlide);
             prevBtn.addEventListener('click', prevSlide);
             
@@ -548,7 +539,6 @@
                 });
             });
             
-            // 修改点9：确保初始加载时显示第一个设备的描述
             updateCarousel();
         });
     </script>
@@ -710,11 +700,11 @@
                 <div class="project-card"
                     data-title="自动化仓储线"
                     data-category="物流存储"
-                    data-image="assets/images/TJ-JCI.png"
+                    data-image="assets/images/TJ-JCI.jpg,assets/images/TJ-JCI01.jpg"
                     data-description="为客户定制的自动化仓储系统。采用模块化、软件驱动的灵活自动存取系统 ASRS 实现仓储效率最大化,有效缩减人工成本"
                     data-specs='{"产品": "物流传送带", "功能": "入料/出料/HST", "项目成果": "更高水平的空间利用率、更高的性能和更大的未来灵活性"}'>
                     
-                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/TJ-JCI.png')">
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/TJ-JCI.jpg')">
                         <div class="project-overlay">
                             <h3>查看项目详情</h3>
                         </div>
@@ -758,7 +748,7 @@
                     data-description="定制的自动化仓储系统。采用模块化、软件驱动的灵活自动存取系统 ASRS 实现仓储效率最大化,有效缩减人工成本"
                     data-specs='{"产品": "物流系统传送带", "功能": "Conveyor Roller/Belt Conveyor Pulley/Flexible Expandable Conveyor"}'>
                     
-                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/Battery00.png')">
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/Logistics/Battery00.png')">
                         <div class="project-overlay">
                             <h3>查看项目详情</h3>
                         </div>
@@ -787,7 +777,47 @@
                     </div>    
                     <div class="project-info">
                         <span class="project-category">软件开发</span>
-                        <h3>数据采集系统</h3>   
+                        <h3>车灯车间数据采集系统</h3>   
+                        <p>软件开发</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
+                <div class="project-card"
+                    data-title="数据采集系统"
+                    data-category="软件开发"
+                    data-image="assets/images/PC开发/禾浦铝业.png"
+                    data-description="根据客户要求，开发定制化服务。"
+                    data-specs='{"开发语言": "C++/C#/VB", "连接对象": "MES/PLC/BCR/VISION/CAMERA"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/PC开发/禾浦铝业.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>    
+                    <div class="project-info">
+                        <span class="project-category">软件开发</span>
+                        <h3>合金车间数据监控及上传</h3>   
+                        <p>软件开发</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
+                <div class="project-card"
+                    data-title="数据采集系统"
+                    data-category="软件开发"
+                    data-image="assets/images/PC开发/Monitor.png"
+                    data-description="根据客户要求，开发定制化服务。"
+                    data-specs='{"开发语言": "C++/C#/VB", "连接对象": "MES/PLC/BCR/VISION/CAMERA"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/PC开发/Monitor.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>    
+                    <div class="project-info">
+                        <span class="project-category">软件开发</span>
+                        <h3>测量类设备数据采集</h3>   
                         <p>软件开发</p>
                         <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
                     </div>

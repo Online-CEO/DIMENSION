@@ -65,9 +65,28 @@
     <!-- 头部区域 -->
     <header class="hero" id="home">
         <div class="container hero-content">
-            <!-- <h1>智能制造 · 驱动未来</h1> -->
             <h1 data-i18n="hero_title">有限世界 · 无限维度</h1>
             <p data-i18n="hero_Subtitle">南阳维度智能装备 - 为全球制造企业提供高精度、高可靠性的自动化生产解决方案</p>
+            
+            <!-- 新增的企业理念部分（紧凑版） -->
+            <div class="company-values-compact">
+                <div class="value-declaration">
+                    <h3>企业理念宣言</h3>
+                    <p class="slogan">诚以立信 客以共生</p>
+                    <p class="sub-slogan">——与客户共绘成长蓝图——</p>
+                </div>
+                
+                <div class="core-values">
+                    <h3>核心价值</h3>
+                    <p class="value-quote">"以诚信为根基，以客户为圆心"</p>
+                    <ul class="value-list">
+                        <li>守正笃实：坚持契约精神，言行一致</li>
+                        <li>匠心服务：用专业技术创造感动体验</li>
+                        <li>共生共赢：做客户长期发展的战略伙伴</li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="hero-btns">
                 <a href="#solutions" class="btn btn-primary">行业解决方案</a>
                 <a href="#contact" class="btn btn-secondary">获取方案咨询</a>
@@ -562,6 +581,28 @@
             
             <div class="projects-grid">
                 <!-- 汽车制造 -->
+
+                <div class="project-card"
+                    data-title="自动上下料"
+                    data-category="汽车制造"
+                    data-image="assets/images/ALTEC LEAK TEST.JPG,assets/images/LEAK TEST.jpg"
+                    data-description="漏检查机，通过对需要气密性的零件或成品施加气压或排出泄漏或将其排至真空来检测差值变化，并给出质量或故障的判断。可以进行阻塞实验/爆破试验/密封测试，有效防止不良品流出。"
+                    data-specs='{"测量仪": "COSMO/ATEQ/USON", "C/T": "26Second", "上下料方式": "人工/机械手", "适用产品": "变速箱/发动机/密封零部件"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/ALTEC LEAK TEST.JPG')">
+                        <div class="project-overlay">
+                            <h3 class="overlay-text">查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">汽车制造</span>
+                        <h3>泄露测试设备</h3>
+                        <p>泄漏测试单机/联动</p>
+                        <!-- 注意：这里的按钮现在不需要data-*属性了，但为了统一样式和行为，可以保留class -->
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
                 <div class="project-card"
                     data-title="泄露测试设备"
                     data-category="汽车制造"
@@ -587,7 +628,7 @@
                 <div class="project-card"
                     data-title="后驱组装测试线"
                     data-category="汽车制造"
-                    data-image="assets/images/TM_TESTLINE/XLDL1.png,assets/images/TM_TESTLINE/XLDL2.png,assets/images/TM_TESTLINE/XLDL3.png"
+                    data-image="assets/images/TM_TESTLINE/XLDL1.png,assets/images/TM_TESTLINE/XLDL2.png,assets/images/TM_TESTLINE/XLDL5.png,assets/images/TM_TESTLINE/XLDL4.png,assets/images/TM_TESTLINE/XLDL3.png"
                     data-description="柔性变速箱测试组装线。客户可以根据自己的需求定制属于自己的设备。"
                     data-specs='{"功能": "人工组装/拧紧/压装/注油/打码/测试/视觉", "C/T": "45Second", "上下料方式": "人工/机械手", "适用产品": "变速箱/发动机"}'>
                     

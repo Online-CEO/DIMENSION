@@ -358,6 +358,20 @@ img {
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
+    
+}
+
+/* 列表容器 - 居中控制 */
+.list-container {
+  text-align: center;
+}
+
+/* 列表本体 - 恢复默认样式 */
+.value-list {
+  display: inline-block;
+  text-align: left; /* 内容保持左对齐 */
+  padding-left: 1em; /* 保持默认缩进 */
+  margin: 0 auto;    /* 水平居中 */
 }
 
 /* ===== 关于公司 ===== */

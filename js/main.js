@@ -424,7 +424,9 @@ function initDetailModal() {
     modal.style.display = "block";
     document.body.style.overflow = "hidden"; // 禁止背景滚动
 
+    // 初始化当前模态框内的Fancybox实例
     Fancybox.bind(`[data-fancybox="${galleryId}"]`, {
+      // 在这里可以添加自定义配置
       Toolbar: {
         display: {
           left: ["infobar"],

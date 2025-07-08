@@ -631,12 +631,22 @@ img {
     right: 20px;
 }
 .carousel-indicators {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    padding: 20px 0;
+}
+.carousel-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .indicator.active {
+    background: #333;
 }
 .indicator {
     width: 12px;
@@ -672,12 +682,14 @@ img {
     gap: 40px;
     align-items: flex-start;
 }
+
 .model-viewer-container model-viewer {
     flex: 1;
     min-width: 0; /* Flexbox缩放问题的关键修复 */
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
+
 .device-description {
     flex: 1;
     min-width: 0;
@@ -933,7 +945,7 @@ img {
     border: none;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: rgb(0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .form-group input:focus {
@@ -988,7 +1000,7 @@ img {
 }
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.2fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
 }
 .contact-info h3 {
@@ -1268,6 +1280,16 @@ img {
 .modal-cta-btn {
     margin-top: 30px;
     display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+.modal-cta-btn:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-2px);
 }
 
 /* 视频模态框样式 */
@@ -1313,12 +1335,13 @@ img {
 @media (max-width: 992px) {
     .hero h1 { font-size: 2.8rem; }
     .about-content,
-    .calculator-container,
-    .model-viewer-container {
+    .calculator-container {
         flex-direction: column;
     }
-    .contact-grid {
-        grid-template-columns: 1fr;
+    
+    .model-viewer-container {
+        display: block;
+        /* flex-direction: column; */
     }
 }
 @media (max-width: 768px) {

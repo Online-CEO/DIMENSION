@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>南阳维度智能装备有限公司 | 工厂自动化解决方案专家</title>
-    
+ 
+
+
     <!-- 浏览器标签图标 -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/LOGO/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/LOGO/favicon-16x16.png">
@@ -63,9 +65,28 @@
     <!-- 头部区域 -->
     <header class="hero" id="home">
         <div class="container hero-content">
-            <!-- <h1>智能制造 · 驱动未来</h1> -->
             <h1 data-i18n="hero_title">有限世界 · 无限维度</h1>
             <p data-i18n="hero_Subtitle">南阳维度智能装备 - 为全球制造企业提供高精度、高可靠性的自动化生产解决方案</p>
+            
+            <!-- 新增的企业理念部分（紧凑版） -->
+            <div class="company-values-compact">
+                <div class="value-declaration">
+                    <h3>企业理念宣言</h3>
+                    <p class="slogan">诚以立信 客以共生</p>
+                    <p class="sub-slogan">——与客户共绘成长蓝图——</p>
+                </div>
+                
+                <div class="core-values">
+                    <h3>核心价值</h3>
+                    <p class="value-quote">"以诚信为根基，以客户为圆心"</p>
+                    <ul class="value-list">
+                        <li>守正笃实：坚持契约精神，言行一致</li>
+                        <li>匠心服务：用专业技术创造感动体验</li>
+                        <li>共生共赢：做客户长期发展的战略伙伴</li>
+                    </ul>
+                </div>
+            </div>
+            
             <div class="hero-btns">
                 <a href="#solutions" class="btn btn-primary">行业解决方案</a>
                 <a href="#contact" class="btn btn-secondary">获取方案咨询</a>
@@ -267,104 +288,279 @@
         <div class="container">
             <div class="section-title">
                 <h2>核心设备展示</h2>
-                <p>自主研发的高精度自动化装备</p>
-                <p>AGV/AMR移动机器人解决方案在工厂及仓库等领域的应用已经十分广泛。它们可以替代人工完成搬运、厂内运输，接驳等任务，可以大幅提升生产效率，降低业务成本，加速赋能企业数字化升级。</p>
-            </div>
-            
-            <div class="model-viewer-container">
-                <model-viewer data-src="assets/models/AGV.glb"
-                    ar
-                    camera-controls
-                    shadow-intensity="1"
-                    style="width:100%; height:500px;">
-                    <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
-                        <div class="hotspot-tooltip">维度智能</div>
-                    </button>
-                </model-viewer>
-                
-                <div class="model-details">
-                    <h3>智能装配工作单元</h3>
-                    <ul class="tech-features">
-                        <li><i class="fas fa-robot"></i> 搭载 DOOSAN A920 协作机器人</li>
-                        <li><i class="fas fa-eye"></i> 梅卡曼德ZR-NANO-ULTRA-JN 系列3D视觉系统</li>
-                        <li><i class="fas fa-car"></i> 仙工AGV</li>
-                        <li><i class="fas fa-network-wired"></i> PROFINET总线控制</li>
-                        <li><i class="fas fa-tachometer-alt"></i> 节拍时间≤45秒</li>
-                    </ul>
-                    
-                    <div class="tech-specs">
-                        <h4>技术参数：</h4>
-                        <table>
-                            <tr>
-                                <td>重复定位精度</td>
-                                <td>±0.02mm</td>
-                            </tr>
-                            <tr>
-                                <td>负载能力</td>
-                                <td>AGV:300kg，机械手10kg</td>
-                            </tr>
-                            <tr>
-                                <td>防护等级</td>
-                                <td>IP54</td>
-                            </tr>
-                        </table>
-                    </div>
-                    
-                    <!-- <button class="btn btn-primary" id="ar-view">
-                        <i class="fas fa-mobile-alt"></i> AR模式查看
-                    </button> -->
+                <div class="dynamic-description">
+                    <p class="tech-desc">设备详细介绍1</p>
+                    <p class="application-desc">设备详细介绍2...</p>
                 </div>
             </div>
             
-            <div class="equipment-grid">
-                <!-- 
-                <div class="equipment-card"
-                data-title="动力电池分拣设备" 
-                                data-category="动力电池"
-                                data-image="assets/images/Cell_Sorter.png"
-                                data-description="本设备用于对生产线上的动力电池进行高速、高精度的自动分拣。通过集成先进的视觉系统和机器人技术，能够快速识别电池的OCV/IR等参数，并将其分类至不同的料框中，极大提升了生产效率和产品一致性。"
-                                data-specs='{"节拍": "≤20秒/模组", "定位精度": "±0.1mm", "适用电池": "方形/软包电芯", "控制系统": "MELSEC PLC"}'>
-                    <div class="equipment-image">
-                        <img src="assets/images/Cell_Sorter.png" alt="合盘机图片">
-                    </div>
-                    <div class="equipment-info">
-                        <h3>动力电池分拣设备</h3>
-                        <div class="equipment-spec">
-                            <span><i class="fas fa-clock"></i> 节拍: ≤20秒/模组</span>
-                            <span><i class="fas fa-bullseye"></i> 精度: ±0.1mm</span>
+            <div class="equipment-carousel">
+                <!-- 原有按钮保持不变 -->
+                <button class="carousel-button prev" aria-label="上一个设备">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-container">
+                    <!-- 第一个设备 -->
+                    <div class="carousel-slide active" data-tech-desc="100%完全自主研发" data-app-desc="CNC自动上下料设备采用先进的技术，实现一台机器人为8台CNC设备自动上下料，可切换30个型号，提升作业效率，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型，是CNC车间升级转型、提高效率和安全性的优质设备。">
+                        <div class="model-viewer-container">
+                            <model-viewer data-src="assets/models/AGV.glb"
+                                
+                                ar
+                                camera-controls
+                                shadow-intensity="1"
+                                style="width:100%; height:500px;">
+                                <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                                    <div class="hotspot-tooltip">维度智能</div>
+                                </button>
+                            </model-viewer>
+                            
+                            <div class="device-description">
+                                <h3>CNC自动上下料设备</h3>
+                                <div class="model-details">
+                                    <h3>智能装配工作单元</h3>
+                                    <ul class="tech-features">
+                                        <li><i class="fas fa-robot"></i> 搭载 DOOSAN A920 协作机器人</li>
+                                        <li><i class="fas fa-eye"></i> 梅卡曼德ZR-NANO-ULTRA-JN 系列3D视觉系统</li>
+                                        <li><i class="fas fa-car"></i> 仙工AGV</li>
+                                        <li><i class="fas fa-network-wired"></i> PROFINET总线控制</li>
+                                        <li><i class="fas fa-tachometer-alt"></i> 节拍时间≤45秒</li>
+                                    </ul>
+                                    
+                                    <div class="tech-specs">
+                                        <h4>技术参数：</h4>
+                                        <table>
+                                            <tr>
+                                                <td>重复定位精度</td>
+                                                <td>±0.02mm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>负载能力</td>
+                                                <td>AGV:300kg，机械手10kg</td>
+                                            </tr>
+                                            <tr>
+                                                <td>控制系统</td>
+                                                <td>西门子PLC+PC</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <button class="btn btn-small view-detail-trigger">
-                            查看项目详情
-                        </button>
+                    </div>
+                    
+                    <!-- 第二个设备 -->
+                    <div class="carousel-slide" data-tech-desc="100%完全自主研发" data-app-desc="软包三元锂电池检测与码垛系统，支持检测功能灵活扩展，包括IV/IR/OCV、电芯正反面拍照、极耳与码垛位置检测、TRAY及电池拍照，自动排出NG及MES不良品。数据实时记录并存储至NAS，支持追溯。可扩展至双投入口，最高产能24PPM。">
+                        <div class="model-viewer-container">
+                            <model-viewer data-src="assets/models/CellPacking.glb"
+                                ar
+                                camera-controls
+                                shadow-intensity="1"
+                                style="width:100%; height:500px;">
+                                <button class="hotspot" slot="hotspot-1" data-position="1.5m 0.5m 0.5m">
+                                    <div class="hotspot-tooltip">维度智能</div>
+                                </button>
+                            </model-viewer>
+                            <div class="device-description">
+                                <h3>电芯PAKCING</h3>
+                                <div class="model-details">
+                                    <h3>智能装配工作单元</h3>
+                                    <ul class="tech-features">
+                                        <li><i class="fas fa-robot"></i> TPC</li>
+                                        <li><i class="fas fa-eye"></i> KEYENCE</li>  
+                                        <li><i class="fa-solid fa-barcode"></i> COGNEX</li>                  
+                                        <li><i class="fas fa-network-wired"></i> CC-LINK</li>
+                                        <li><i class="fas fa-tachometer-alt"></i> 单投入口PPM12</li>
+                                    </ul>
+                                    
+                                    <div class="tech-specs">
+                                        <h4>技术参数：</h4>
+                                        <table>
+                                            <tr>
+                                                <td>功能内容</td>
+                                                <td>IV/IR/OCV/SIZE</td>
+                                            </tr>
+                                            <tr>
+                                                <td>上位机</td>
+                                                <td>C#;MY-SQL;NAS</td>
+                                            </tr>
+                                            <tr>
+                                                <td>控制系统</td>
+                                                <td>三菱PLC+PC</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="equipment-card" 
-                                data-title="动力电池包装设备" 
-                                data-category="动力电池"
-                                data-image="assets/images/Cell_PACKING.png"
-                                data-description="本设备用于对生产线上的动力电池进行高速、高精度包装。通过集成先进的视觉系统和机器人技术，能够快速识别电池的OCV/IR等参数，并将其分类至不同的料框中，极大提升了生产效率和产品一致性。"
-                                data-specs='{"节拍": "≤20秒/模组", "定位精度": "±0.1mm", "适用电池": "方形/软包电芯", "控制系统": "MELSEC PLC"}'>
-                    <div class="equipment-image">
-                        <img src="assets/images/Cell_PACKING/Cell_PACKING.png" alt="CELL PACKING PHOTO">
-                    </div>
-                    <div class="equipment-info">
-                        <h3>动力电池包装设备</h3>
-                        <div class="equipment-spec">
-                            <span><i class="fas fa-clock"></i> 节拍: ≤20秒/模组</span>
-                            <span><i class="fas fa-bullseye"></i> 精度: ±0.1mm</span>
-                        </div>
-                        <button class="btn btn-small view-detail-trigger">
-                            查看项目详情
-                        </button>
-                    </div>
-                </div> 
-                -->
+                <button class="carousel-button next" aria-label="下一个设备">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
                 
-                <!-- 更多设备卡片... -->
+                <div class="carousel-indicators">
+                    <button class="indicator active" aria-label="显示设备1"></button>
+                    <button class="indicator" aria-label="显示设备2"></button>
+                </div>
             </div>
         </div>
     </section>
+
+    <style>
+        .equipment-carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            display: none;
+        }
+        
+        .carousel-slide.active {
+            display: block;
+        }
+        
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.7);
+            color: #333;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-button.prev {
+            left: 10px;
+        }
+        
+        .carousel-button.next {
+            right: 10px;
+        }
+        
+        .carousel-button:hover {
+            background: rgba(255,255,255,0.9);
+            color: #000;
+        }
+        
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+        
+        .carousel-indicators .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .carousel-indicators .indicator.active {
+            background: #333;
+        }
+        
+        .dynamic-description {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .tech-desc {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .application-desc {
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const carousel = document.querySelector('.equipment-carousel');
+            const container = carousel.querySelector('.carousel-container');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const prevBtn = carousel.querySelector('.carousel-button.prev');
+            const nextBtn = carousel.querySelector('.carousel-button.next');
+            const indicators = carousel.querySelectorAll('.indicator');
+            
+            const techDesc = document.querySelector('.tech-desc');
+            const appDesc = document.querySelector('.application-desc');
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            
+            function updateCarousel() {
+                slides.forEach((slide, index) => {
+                    const shouldShow = index === currentIndex;
+                    slide.classList.toggle('active', shouldShow);
+                    
+                    if(shouldShow) {
+
+                        techDesc.textContent = slide.dataset.techDesc;
+                        appDesc.textContent = slide.dataset.appDesc;
+                        
+
+                        const modelViewer = slide.querySelector('model-viewer');
+                        if(modelViewer && modelViewer.dataset.src) {
+                            modelViewer.src = modelViewer.dataset.src;
+                        }
+                    }
+                });
+                
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+            
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+            
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateCarousel();
+                });
+            });
+            
+            updateCarousel();
+        });
+    </script>
 
     <!-- 成功案例 -->
     <section class="projects" id="cases">
@@ -376,15 +572,46 @@
             
             <div class="projects-filter">
                 <button class="filter-btn active">全部</button>
-                <button class="filter-btn">汽车制造</button>
-		        <button class="filter-btn">软件开发</button>
+                <button class="filter-btn">通用设备</button>
+                <button class="filter-btn">汽车制造</button>		        
                 <button class="filter-btn">动力电池</button>
                 <button class="filter-btn">智能物流</button>
+                <button class="filter-btn">软件开发</button>
 		    
             </div>
             
             <div class="projects-grid">
-                <!-- 汽车制造 -->
+                <!-- 通用设备 -->
+
+                <div class="project-card"
+                    data-title="CNC自动上下料"
+                    data-category="通用设备"
+                    data-image="assets/images/AGV/AGV01.jpg,assets/images/AGV/AGV02.jpg"
+                    data-description="一台机器人为8台CNC设备自动上下料，可切换30个型号，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型。"
+                    data-specs='{"机器人": "DOOSAN", "C/T": "45Second", "AGV": "仙工", "特征": "柔性，兼容多型号"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/AGV/AGV01.jpg')">
+                        <div class="project-overlay">
+                            <h3 class="overlay-text">查看项目详情</h3>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">通用设备</span>
+                        <h3>CNC自动上下料</h3>
+                        <p>柔性，多型号切换</p>
+                        <!-- 注意：这里的按钮现在不需要data-*属性了，但为了统一样式和行为，可以保留class -->
+                         <a href="#" class="case-link-video case-link" 
+                        data-video-src="//player.bilibili.com/player.html?isOutside=true&aid=114805968999267&bvid=BV1n13izmEdb&cid=30883972603&p=1">
+                            查看项目视频 <i class="fas fa-play-circle"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
+                 <!-- 汽车制造 -->
+
+
                 <div class="project-card"
                     data-title="泄露测试设备"
                     data-category="汽车制造"
@@ -406,11 +633,11 @@
                     </div>
                 </div>
 
-                
+                  
                 <div class="project-card"
                     data-title="后驱组装测试线"
                     data-category="汽车制造"
-                    data-image="assets/images/TM_TESTLINE/XLDL1.png,assets/images/TM_TESTLINE/XLDL2.png,assets/images/TM_TESTLINE/XLDL3.png"
+                    data-image="assets/images/TM_TESTLINE/XLDL1.png,assets/images/TM_TESTLINE/XLDL2.png,assets/images/TM_TESTLINE/XLDL5.png,assets/images/TM_TESTLINE/XLDL4.png,assets/images/TM_TESTLINE/XLDL3.png"
                     data-description="柔性变速箱测试组装线。客户可以根据自己的需求定制属于自己的设备。"
                     data-specs='{"功能": "人工组装/拧紧/压装/注油/打码/测试/视觉", "C/T": "45Second", "上下料方式": "人工/机械手", "适用产品": "变速箱/发动机"}'>
                     
@@ -431,7 +658,7 @@
 		        <div class="project-card"
                     data-title="发动机组装设备"
                     data-category="汽车制造"
-                    data-image="assets/images/ENGINE/STD.png,assets/images/ENGINE/CV.png,assets/images/ENGINE/DIV.png,assets/images/ENGINE/TURN.png,assets/images/ENGINE/SP.png,assets/images/ENGINE/NR.png"
+                    data-image="assets/images/ENGINE/STD.png,assets/images/ENGINE/STD02.png,assets/images/ENGINE/CV.png,assets/images/ENGINE/DIV.png,assets/images/ENGINE/TURN.png,assets/images/ENGINE/SP.png,assets/images/ENGINE/NR.png"
                     data-description="高度模块化，柔性组装适用于多产品混合生产。"
                     data-specs='{"功能": "人工组装/拧紧/压装/注油/打码/测试/视觉", "C/T": "50Second", "上下料方式": "人工/机械手", "适用产品": "发动机"}'>
                     
@@ -449,27 +676,30 @@
                     </div>
                 </div>
 
-                
-		        <div class="project-card"
-                    data-title="数据采集系统"
-                    data-category="软件开发"
-                    data-image="assets/images/PC开发/MOBIS.jpg,assets/images/PC开发/禾浦铝业.png,assets/images/PC开发/Monitor.png"
-                    data-description="根据客户要求，开发定制化服务。"
-                    data-specs='{"开发语言": "C++/C#/VB", "连接对象": "MES/PLC/BCR/VISION/CAMERA"}'>
+		    
+                <div class="project-card"
+                    data-title="焊接设备"
+                    data-category="汽车制造"
+                    data-image="assets/images/Welding/Welding03.JPG,assets/images/Welding/Welding04.JPG,assets/images/Welding/Welding01.JPG,assets/images/Welding/Welding02.JPG"
+                    data-description="漏检查机，通过对需要气密性的零件或成品施加气压或排出泄漏或将其排至真空来检测差值变化，并给出质量或故障的判断。可以进行阻塞实验/爆破试验/密封测试，有效防止不良品流出。"
+                    data-specs='{"焊接机器人": "ABB/KUKA/HYUNDAI/YASKAWA/OTC", "焊接类型": "SPOT/LASER/MIG/MAG", "上下料方式": "人工/机械手", "适用产品": "白车身/一般焊接件/工装夹具"}'>
                     
-                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/PC开发/MOBIS.jpg')">
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/Welding/Welding03.JPG')">
                         <div class="project-overlay">
-                            <h3>查看项目详情</h3>
+                            <h3 class="overlay-text">查看项目详情</h3>
                         </div>
-                    </div>    
+                    </div>
                     <div class="project-info">
-                        <span class="project-category">软件开发</span>
-                        <h3>数据采集系统</h3>   
-                        <p>软件开发</p>
+                        <span class="project-category">汽车制造</span>
+                        <h3>焊接设备</h3>
+                        <p>工作站/全自动流水线</p>
+                        <!-- 注意：这里的按钮现在不需要data-*属性了，但为了统一样式和行为，可以保留class -->
                         <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
                     </div>
                 </div>
-		    
+
+
+
                 <!-- 动力电池 -->
                 <div class="project-card"
                     data-title="电芯分拣设备"
@@ -509,7 +739,7 @@
                         <h3>电芯装载设备 CELL PACKING</h3>
                         <p>对CELL进行SIZE IV IR OCV检测合格品码垛并且确认摆放位 PPM10</p>
                         <a href="#" class="case-link-video case-link" 
-                        data-video-src="assets/videos/CELL_PACKING.mp4">
+                        data-video-src="//player.bilibili.com/player.html?isOutside=true&aid=114810716951481&bvid=BV1kG3kzeEd4&cid=30898062017&p=1">
                             查看项目视频 <i class="fas fa-play-circle"></i>
                         </a>
                     </div>
@@ -543,11 +773,11 @@
                 <div class="project-card"
                     data-title="自动化仓储线"
                     data-category="物流存储"
-                    data-image="assets/images/TJ-JCI.png"
+                    data-image="assets/images/TJ-JCI.jpg,assets/images/TJ-JCI01.jpg"
                     data-description="为客户定制的自动化仓储系统。采用模块化、软件驱动的灵活自动存取系统 ASRS 实现仓储效率最大化,有效缩减人工成本"
                     data-specs='{"产品": "物流传送带", "功能": "入料/出料/HST", "项目成果": "更高水平的空间利用率、更高的性能和更大的未来灵活性"}'>
                     
-                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/TJ-JCI.png')">
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/TJ-JCI.jpg')">
                         <div class="project-overlay">
                             <h3>查看项目详情</h3>
                         </div>
@@ -558,6 +788,10 @@
 			            <p>合作公司:HYUNDAI-MOVEX</p>
                         <p>自动化仓储系统,堆垛机双叉1台单叉4台</p>
                         <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                         <a href="#" class="case-link-video case-link" 
+                        data-video-src="//player.bilibili.com/player.html?isOutside=true&aid=114810129749840&bvid=BV1jK3CztE8e&cid=30895574851&p=1">
+                            查看项目视频 <i class="fas fa-play-circle"></i>
+                        </a>
                     </div>
                 </div>
 
@@ -591,7 +825,7 @@
                     data-description="定制的自动化仓储系统。采用模块化、软件驱动的灵活自动存取系统 ASRS 实现仓储效率最大化,有效缩减人工成本"
                     data-specs='{"产品": "物流系统传送带", "功能": "Conveyor Roller/Belt Conveyor Pulley/Flexible Expandable Conveyor"}'>
                     
-                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/Battery00.png')">
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/Logistics/Battery00.png')">
                         <div class="project-overlay">
                             <h3>查看项目详情</h3>
                         </div>
@@ -604,6 +838,69 @@
                     </div>
                 </div>
 
+
+                <!-- 软件开发 -->
+                <div class="project-card"
+                    data-title="数据采集系统"
+                    data-category="软件开发"
+                    data-image="assets/images/PC开发/MOBIS.jpg,assets/images/PC开发/禾浦铝业.png,assets/images/PC开发/Monitor.png"
+                    data-description="根据客户要求，开发定制化服务。"
+                    data-specs='{"开发语言": "C++/C#/VB", "连接对象": "MES/PLC/BCR/VISION/CAMERA"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/PC开发/MOBIS.jpg')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>    
+                    <div class="project-info">
+                        <span class="project-category">软件开发</span>
+                        <h3>车灯车间数据采集系统</h3>   
+                        <p>工厂实时数据采集</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
+                <div class="project-card"
+                    data-title="数据采集系统"
+                    data-category="软件开发"
+                    data-image="assets/images/PC开发/禾浦铝业.png"
+                    data-description="根据客户要求，开发定制化服务。"
+                    data-specs='{"开发语言": "C++/C#/VB", "连接对象": "MES/PLC/BCR/VISION/CAMERA"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/PC开发/禾浦铝业.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>    
+                    <div class="project-info">
+                        <span class="project-category">软件开发</span>
+                        <h3>合金车间数据监控及上传</h3>   
+                        <p>工厂实时数据采集</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
+                <div class="project-card"
+                    data-title="数据采集系统"
+                    data-category="软件开发"
+                    data-image="assets/images/PC开发/Monitor.png"
+                    data-description="根据客户要求，开发定制化服务。"
+                    data-specs='{"开发语言": "C++/C#/VB", "连接对象": "MES/PLC/BCR/VISION/CAMERA"}'>
+                    
+                    <div class="project-image view-detail-trigger" style="background-image: url('assets/images/PC开发/Monitor.png')">
+                        <div class="project-overlay">
+                            <h3>查看项目详情</h3>
+                        </div>
+                    </div>    
+                    <div class="project-info">
+                        <span class="project-category">软件开发</span>
+                        <h3>测量类设备数据采集</h3>   
+                        <p>数据采集归档/查找追溯/散点图/品质曲线</p>
+                        <!-- <a href="#" class="case-link">查看项目视频 <i class="fas fa-play-circle"></i></a> -->
+                    </div>
+                </div>
+
+                
                 <!-- 更多案例卡片... -->
             </div>
         </div>

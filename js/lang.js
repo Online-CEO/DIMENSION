@@ -1,46 +1,47 @@
 (async function () {
-  // ===== 元素获取 =====
+  // ===== 요소 가져오기 =====
   const langToggle = document.getElementById("lang-toggle");
   const currentLangText = document.getElementById("current-lang-text");
   const langMenu = document.getElementById("lang-menu");
 
-  // 语言名称映射
+  // 언어 이름 매핑
   const langMap = {
     zh: "中文",
     en: "English",
     ko: "한국어",
   };
 
-  // ===== 语言检测与加载 =====
+  // ===== 언어 감지 및 로드 =====
   const browserLang = navigator.language.slice(0, 2);
   const supported = ["zh", "en", "ko"];
-  const storedLang = localStorage.getItem("site_lang");
   let currentLang =
-    storedLang || (supported.includes(browserLang) ? browserLang : "zh");
+    localStorage.getItem("site_lang") ||
+    (supported.includes(browserLang) ? browserLang : "zh");
 
-  // 加载语言文件函数
+  // 언어 파일 로드 함수
   async function loadLang(lang) {
     try {
       const res = await fetch(`lang/${lang}.json`);
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       return await res.json();
     } catch (e) {
-      console.error(`语言包 lang/${lang}.json 加载失败`, e);
-      // 如果目标语言加载失败，回退到中文
+      console.error(`언어 팩 lang/${lang}.json 로드 실패`, e);
       if (lang !== "zh") {
-        return await loadLang("zh");
+        return await loadLang("zh"); // 실패 시 중국어로 대체
       }
       return {};
     }
   }
 
-  // 应用翻译函数
+  // 번역 적용 함수
   function applyTranslations(t) {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (t[key]) {
-        // 处理带HTML标签的翻译
-        if (key.includes("Title") || key.includes("Subtitle")) {
+        // 보안을 위해 innerHTML 대신 textContent를 기본으로 사용
+        // HTML 태그가 필요한 경우에만 innerHTML 사용 (예: <br>)
+        // 더 안전한 방법은 라이브러리를 사용하거나, 서버 사이드에서 렌더링하는 것
+        if (t[key].includes("<") && t[key].includes(">")) {
           el.innerHTML = t[key];
         } else {
           el.textContent = t[key];
@@ -48,13 +49,12 @@
       }
     });
     document.documentElement.lang = currentLang;
-    // 更新下拉框显示的当前语言
     if (currentLangText) {
-      currentLangText.textContent = langMap[currentLang];
+      currentLangText.textContent = langMap[currentLang] || "Language";
     }
   }
 
-  // 切换语言的主函数
+  // 언어 전환 메인 함수
   async function switchLang(lang) {
     if (lang === currentLang) return;
     currentLang = lang;
@@ -63,24 +63,20 @@
     applyTranslations(t);
   }
 
-  // ===== 事件监听 =====
-
-  // 1. 监听下拉框按钮点击，用于显示/隐藏菜单
+  // ===== 이벤트 리스너 =====
   if (langToggle) {
     langToggle.addEventListener("click", (e) => {
-      e.stopPropagation(); // 防止事件冒泡到window
+      e.stopPropagation();
       langMenu.classList.toggle("show");
     });
   }
 
-  // 2. 监听整个文档的点击，用于在点击外部时关闭菜单
   window.addEventListener("click", () => {
     if (langMenu && langMenu.classList.contains("show")) {
       langMenu.classList.remove("show");
     }
   });
 
-  // 3. 监听下拉菜单项的点击，用于切换语言
   if (langMenu) {
     langMenu.addEventListener("click", (e) => {
       const target = e.target.closest(".dropdown-item");
@@ -91,7 +87,7 @@
     });
   }
 
-  // ===== 初始化页面 =====
+  // ===== 페이지 초기화 =====
   const initialTranslations = await loadLang(currentLang);
   applyTranslations(initialTranslations);
 })();

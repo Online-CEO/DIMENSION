@@ -688,6 +688,7 @@ img {
     min-width: 0; /* Flexbox缩放问题的关键修复 */
     border-radius: 8px;
     box-shadow: var(--shadow);
+    background-color: #333;
 }
 
 .device-description {

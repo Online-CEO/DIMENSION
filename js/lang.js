@@ -1,10 +1,10 @@
 (async function () {
   // ===== 元素获取 =====
-  const langToggle = document.getElementById("lang-toggle");
-  const currentLangText = document.getElementById("current-lang-text");
-  const langMenu = document.getElementById("lang-menu");
+  const langToggle = document.getElementById("lang-toggle"); // 语言切换按钮
+  const currentLangText = document.getElementById("current-lang-text"); // 显示当前语言文本的元素
+  const langMenu = document.getElementById("lang-menu"); // 语言下拉菜单
 
-  // 语言名称映射
+  // 语言代码到显示名称的映射
   const langMap = {
     zh: "中文",
     en: "English",
@@ -12,17 +12,22 @@
   };
 
   // ===== 语言检测与加载 =====
-  const browserLang = navigator.language.slice(0, 2);
-  const supported = ["zh", "en", "ko"];
-  const storedLang = localStorage.getItem("site_lang");
+  const browserLang = navigator.language.slice(0, 2); // 获取浏览器语言 (如 'zh', 'en')
+  const supported = ["zh", "en", "ko"]; // 网站支持的语言列表
+  // 优先从本地存储获取，其次用浏览器语言，默认为中文
   let currentLang =
-    storedLang || (supported.includes(browserLang) ? browserLang : "zh");
+    localStorage.getItem("site_lang") ||
+    (supported.includes(browserLang) ? browserLang : "zh");
 
-  // 加载语言文件函数
+  /**
+   * 功能：根据语言代码加载对应的JSON语言包
+   * @param {string} lang - 语言代码 (e.g., 'zh', 'en')
+   * @returns {Promise<object>} - 包含翻译文本的对象
+   */
   async function loadLang(lang) {
     try {
       const res = await fetch(`lang/${lang}.json`);
-      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      if (!res.ok) throw new Error(`HTTP 错误! 状态: ${res.status}`);
       return await res.json();
     } catch (e) {
       console.error(`语言包 lang/${lang}.json 加载失败`, e);
@@ -34,41 +39,48 @@
     }
   }
 
-  // 应用翻译函数
+  /**
+   * 功能：将翻译应用到页面上所有带 data-i18n 属性的元素
+   * @param {object} t - 包含翻译文本的对象
+   */
   function applyTranslations(t) {
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if (t[key]) {
-        // 处理带HTML标签的翻译
-        if (key.includes("Title") || key.includes("Subtitle")) {
+        // 为了安全，默认使用 textContent。如果翻译内容确实需要HTML标签，可以特殊处理。
+        // 例如，如果key包含'html'字样，则使用innerHTML。
+        if (t[key].includes("<") && t[key].includes(">")) {
           el.innerHTML = t[key];
         } else {
           el.textContent = t[key];
         }
       }
     });
+    // 更新<html>标签的lang属性，对SEO和可访问性有益
     document.documentElement.lang = currentLang;
-    // 更新下拉框显示的当前语言
+    // 更新下拉框中显示的当前语言名称
     if (currentLangText) {
-      currentLangText.textContent = langMap[currentLang];
+      currentLangText.textContent = langMap[currentLang] || "Language";
     }
   }
 
-  // 切换语言的主函数
+  /**
+   * 功能：切换语言的主函数
+   * @param {string} lang - 要切换到的目标语言代码
+   */
   async function switchLang(lang) {
-    if (lang === currentLang) return;
+    if (lang === currentLang) return; // 如果已经是当前语言，则不执行任何操作
     currentLang = lang;
-    localStorage.setItem("site_lang", lang);
+    localStorage.setItem("site_lang", lang); // 将用户的选择保存到本地存储
     const t = await loadLang(lang);
     applyTranslations(t);
   }
 
   // ===== 事件监听 =====
-
   // 1. 监听下拉框按钮点击，用于显示/隐藏菜单
   if (langToggle) {
     langToggle.addEventListener("click", (e) => {
-      e.stopPropagation(); // 防止事件冒泡到window
+      e.stopPropagation(); // 防止事件冒泡到window，导致菜单立即关闭
       langMenu.classList.toggle("show");
     });
   }
@@ -80,7 +92,7 @@
     }
   });
 
-  // 3. 监听下拉菜单项的点击，用于切换语言
+  // 3. 监听下拉菜单项的点击，用于切换语言 (事件委托)
   if (langMenu) {
     langMenu.addEventListener("click", (e) => {
       const target = e.target.closest(".dropdown-item");
@@ -91,7 +103,8 @@
     });
   }
 
-  // ===== 初始化页面 =====
+  // ===== 页面初始化 =====
+  // 页面加载时，立即加载并应用当前语言
   const initialTranslations = await loadLang(currentLang);
   applyTranslations(initialTranslations);
 })();

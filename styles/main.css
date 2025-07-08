@@ -1,21 +1,21 @@
-/* ===== 변수 정의 ===== */
+/* ===== 变量定义 ===== */
 :root {
-    --primary: #0056b3;
-    --primary-light: #4d8fd6;
-    --secondary: #00a0e3;
-    --accent: #ff6b00;
-    --accent-light: #ff8c33;
-    --dark: #1a2a4a;
-    --dark-light: #2c3e5e;
-    --light: #f8f9fa;
-    --gray: #6c757d;
-    --light-gray: #e9ecef;
-    --transition: all 0.3s ease;
-    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --primary: #0056b3;        /* 主色调，用于链接、标题等 */
+    --primary-light: #4d8fd6; /* 主色调的亮色变体 */
+    --secondary: #00a0e3;     /* 辅助色，用于点缀 */
+    --accent: #ff6b00;         /* 强调色，用于按钮、图标等需要突出的元素 */
+    --accent-light: #ff8c33;  /* 强调色的亮色变体 */
+    --dark: #1a2a4a;           /* 深色，用于文本和背景 */
+    --dark-light: #2c3e5e;    /* 深色的亮色变体 */
+    --light: #f8f9fa;         /* 浅色，用于背景 */
+    --gray: #6c757d;           /* 灰色，用于辅助文本 */
+    --light-gray: #e9ecef;     /* 浅灰色，用于边框和分隔线 */
+    --transition: all 0.3s ease; /* 通用过渡效果 */
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);      /* 标准阴影 */
+    --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15); /* 悬停时的阴影 */
 }
 
-/* ===== 기본 스타일 ===== */
+/* ===== 基础与全局样式 ===== */
 * {
     margin: 0;
     padding: 0;
@@ -23,11 +23,11 @@
 }
 
 html, body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* 防止水平滚动条出现 */
 }
 
 body {
-    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; /* 字体栈 */
     line-height: 1.6;
     color: #333;
     background-color: #fff;
@@ -51,11 +51,12 @@ img {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1200px; /* 内容最大宽度 */
     margin: 0 auto;
     padding: 0 15px;
 }
 
+/* 各个区域的通用标题样式 */
 .section-title {
     text-align: center;
     margin-bottom: 50px;
@@ -68,6 +69,7 @@ img {
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
+/* 标题下方的装饰性横线 */
 .section-title h2:after {
     content: '';
     position: absolute;
@@ -85,6 +87,7 @@ img {
     margin: 0 auto;
 }
 
+/* 通用按钮样式 */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -95,7 +98,7 @@ img {
     cursor: pointer;
     border: none;
 }
-.btn-primary {
+.btn-primary { /* 主按钮 */
     background-color: var(--accent);
     color: white;
     border: 2px solid var(--accent);
@@ -105,7 +108,7 @@ img {
     transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
 }
-.btn-secondary {
+.btn-secondary { /* 次要按钮 */
     background-color: transparent;
     color: white;
     border: 2px solid white;
@@ -114,15 +117,15 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-3px);
 }
-.btn-small {
+.btn-small { /* 小按钮 */
     padding: 8px 20px;
     font-size: 0.9rem;
 }
 
-/* ===== 내비게이션 바 ===== */
+/* ===== 导航栏 ===== */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.95);
-    position: fixed;
+    background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
+    position: fixed; /* 固定在顶部 */
     top: 0;
     left: 0;
     width: 100%;
@@ -130,6 +133,7 @@ img {
     padding: 15px 0;
     transition: var(--transition);
 }
+/* JS控制的滚动后样式 */
 .navbar.scrolled {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.98);
@@ -174,6 +178,7 @@ img {
 .nav-links a:hover {
     color: var(--primary);
 }
+/* 导航链接悬停下划线动画 */
 .nav-links a:after {
     content: '';
     position: absolute;
@@ -187,14 +192,14 @@ img {
 .nav-links a:hover:after {
     width: 100%;
 }
-.mobile-toggle {
+.mobile-toggle { /* 移动端菜单按钮 */
     display: none;
     font-size: 24px;
     cursor: pointer;
     color: var(--dark);
 }
 
-/* ===== 언어 전환 드롭다운 ===== */
+/* ===== 语言切换下拉框 ===== */
 .language-switcher {
     margin-left: 20px;
 }
@@ -220,9 +225,9 @@ img {
     border-color: var(--gray);
 }
 .dropdown-menu {
-    display: none;
+    display: none; /* 默认隐藏 */
     position: absolute;
-    top: 110%;
+    top: 110%; /* 按钮下方显示 */
     right: 0;
     background-color: white;
     box-shadow: var(--shadow);
@@ -231,10 +236,10 @@ img {
     padding: 5px 0;
     margin: 0;
     min-width: 120px;
-    z-index: 1001;
+    z-index: 1001; /* 确保在导航栏之上 */
     overflow: hidden;
 }
-.dropdown-menu.show {
+.dropdown-menu.show { /* JS控制显示 */
     display: block;
 }
 .dropdown-item {
@@ -253,12 +258,12 @@ img {
     color: var(--primary);
 }
 
-/* ===== 헤더 영역 ===== */
+/* ===== 头部英雄区域 ===== */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/Background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; /* 背景图固定，产生视差效果 */
     height: 100vh;
     display: flex;
     align-items: center;
@@ -290,7 +295,7 @@ img {
     margin-top: 30px;
 }
 
-/* ===== 헤더 영역 - 기업 이념 스타일 ===== */
+/* ===== 头部 - 企业理念 ===== */
 .company-values-compact {
     display: flex;
     justify-content: center;
@@ -298,10 +303,10 @@ img {
     margin: 40px auto;
     padding: 20px;
     max-width: 900px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3); /* 半透明背景 */
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); /* 毛玻璃效果 */
     color: white;
 }
 .value-declaration, .core-values {
@@ -347,7 +352,7 @@ img {
     margin-right: 8px;
 }
 
-/* ===== 회사 소개 ===== */
+/* ===== 关于我们 ===== */
 .about {
     padding: 100px 0;
     background-color: var(--light);
@@ -400,15 +405,13 @@ img {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 .about-image img {
-    width: 100%;
-    height: auto;
     transition: transform 0.5s ease;
 }
 .about-image:hover img {
     transform: scale(1.05);
 }
 
-/* ===== 발전 과정 (Timeline) 스타일 ===== */
+/* ===== 发展历程 (Timeline) ===== */
 .timeline {
     padding: 100px 0;
     background-color: var(--light);
@@ -418,6 +421,7 @@ img {
     max-width: 1000px;
     margin: 0 auto;
 }
+/* 中心时间线 */
 .timeline-items::before {
     content: '';
     position: absolute;
@@ -433,24 +437,29 @@ img {
     position: relative;
     width: 50%;
     box-sizing: border-box;
+    /* 动画初始状态 */
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+/* JS添加此类以触发动画 */
 .timeline-item.in-view {
     opacity: 1;
     transform: translateY(0);
 }
+/* 左侧条目 */
 .timeline-item:nth-child(odd) {
     left: 0;
     padding-right: 70px;
     text-align: right;
 }
+/* 右侧条目 */
 .timeline-item:nth-child(even) {
     left: 50%;
     padding-left: 70px;
     text-align: left;
 }
+/* 时间轴上的圆点 */
 .timeline-item::after {
     content: '';
     position: absolute;
@@ -482,7 +491,7 @@ img {
     margin-bottom: 10px;
 }
 
-/* ===== 산업 솔루션 ===== */
+/* ===== 行业解决方案 ===== */
 .industry-solutions {
     padding: 100px 0;
     background-color: white;
@@ -514,7 +523,7 @@ img {
     background-color: white;
 }
 .tab-content {
-    display: none; /* JS will manage this */
+    display: none; /* JS会控制其显示 */
     padding: 30px;
     background-color: white;
 }
@@ -566,15 +575,13 @@ img {
     overflow: hidden;
 }
 .solution-image img {
-    width: 100%;
-    height: auto;
     transition: transform 0.5s ease;
 }
 .solution-image:hover img {
     transform: scale(1.03);
 }
 
-/* ===== 장비 전시 & 캐러셀 ===== */
+/* ===== 设备展示 & 轮播 ===== */
 .equipment-showcase {
     padding: 100px 0;
     background-color: var(--light);
@@ -667,7 +674,7 @@ img {
 }
 .model-viewer-container model-viewer {
     flex: 1;
-    min-width: 0;
+    min-width: 0; /* Flexbox缩放问题的关键修复 */
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
@@ -717,7 +724,7 @@ img {
 }
 
 
-/* ===== 성공 사례 ===== */
+/* ===== 成功案例 ===== */
 .projects {
     padding: 100px 0;
     background-color: white;
@@ -754,7 +761,7 @@ img {
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
-    display: block; /* For filtering */
+    display: block; /* 用于筛选 */
 }
 .project-card:hover {
     transform: translateY(-10px);
@@ -819,7 +826,7 @@ img {
     color: var(--accent);
 }
 
-/* ===== 고객 후기 ===== */
+/* ===== 客户见证 ===== */
 .testimonials {
     padding: 80px 0;
     background-color: var(--light);
@@ -888,7 +895,7 @@ img {
     color: var(--gray);
 }
 
-/* ===== ROI 계산기 ===== */
+/* ===== ROI计算器 ===== */
 .roi-calculator {
     padding: 80px 0;
     background: var(--primary);
@@ -974,7 +981,7 @@ img {
     text-align: center;
 }
 
-/* ===== 문의하기 영역 ===== */
+/* ===== 联系我们 ===== */
 .contact {
     padding: 100px 0;
     background-color: var(--light);
@@ -1063,7 +1070,7 @@ img {
     resize: vertical;
 }
 
-/* ===== 푸터 ===== */
+/* ===== 页脚 ===== */
 .footer {
     background: var(--dark);
     color: rgba(255, 255, 255, 0.7);
@@ -1139,7 +1146,7 @@ img {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* ===== 모달 스타일 ===== */
+/* ===== 模态框 (弹窗) 样式 ===== */
 .modal {
     display: none;
     position: fixed;
@@ -1214,7 +1221,6 @@ img {
     border: 2px solid transparent;
     transition: border-color 0.3s;
 }
-.modal-thumb-images img:hover,
 .modal-thumb-images a .active {
     border-color: var(--primary);
 }
@@ -1264,7 +1270,7 @@ img {
     display: inline-block;
 }
 
-/* 비디오 모달 스타일 */
+/* 视频模态框样式 */
 .video-modal-content {
     position: relative;
     width: 90%;
@@ -1276,7 +1282,7 @@ img {
 }
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 비율 */
+    padding-bottom: 56.25%; /* 16:9 宽高比 */
     height: 0;
     overflow: hidden;
     border-radius: 8px;
@@ -1291,11 +1297,11 @@ img {
     border: 0;
 }
 
-/* 애니메이션 */
+/* 动画效果 */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-/* ===== 반응형 디자인 ===== */
+/* ===== 响应式设计 ===== */
 @media (max-width: 1200px) {
     .solution-tabs .tab-content {
         flex-direction: column;
@@ -1304,28 +1310,24 @@ img {
         order: -1;
     }
 }
-
 @media (max-width: 992px) {
     .hero h1 { font-size: 2.8rem; }
     .about-content,
-    .calculator-container {
+    .calculator-container,
+    .model-viewer-container {
         flex-direction: column;
     }
     .contact-grid {
         grid-template-columns: 1fr;
     }
-    .model-viewer-container {
-        flex-direction: column;
-    }
 }
-
 @media (max-width: 768px) {
     .mobile-toggle {
         display: block;
     }
     .nav-links {
         position: absolute;
-        top: 70px; /* Adjust based on navbar height */
+        top: 70px; /* 根据导航栏实际高度调整 */
         left: 0;
         background: white;
         width: 100%;
@@ -1410,7 +1412,6 @@ img {
         padding: 20px;
     }
 }
-
 @media (max-width: 576px) {
     .section-title h2 { font-size: 2rem; }
     .section-title p { font-size: 1rem; }

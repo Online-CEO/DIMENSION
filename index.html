@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>南阳维度智能装备有限公司 | 工厂自动化解决方案专家</title>
 
-    <!-- Favicon -->
+    <!-- Favicon (浏览器标签页图标) -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/LOGO/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/LOGO/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/LOGO/apple-touch-icon.png">
@@ -13,24 +13,27 @@
     <meta name="msapplication-TileColor" content="#0056b3">
     <meta name="theme-color" content="#ffffff">
 
+    <!-- SEO & 描述信息 -->
     <meta name="description" content="专业提供汽车制造、动力电池等行业的智能装配线、自动化检测设备和工业机器人集成解决方案">
     
-    <!-- Stylesheets -->
+    <!-- CSS 样式表 -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- 3D Model Viewer -->
+    <!-- 3D 模型查看器 -->
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
-    <!-- 내비게이션 바 -->
+    <!-- ======================= 导航栏区域 ======================= -->
     <nav class="navbar">
         <div class="container navbar-container">
+            <!-- 公司 LOGO -->
             <div class="logo">
                 <img src="assets/LOGO/DIMENSION LOGO1.png" alt="维度智能公司LOGO">
                 <div class="logo-text">维度<span>智能</span></div>
             </div>
+            <!-- 导航链接 -->
             <ul class="nav-links">
                 <li><a href="#home" data-i18n="nav_home">首页</a></li>
                 <li><a href="#about" data-i18n="nav_about">关于我们</a></li>
@@ -40,6 +43,7 @@
                 <li><a href="#cases" data-i18n="nav_cases">成功案例</a></li>
                 <li><a href="#contact" data-i18n="nav_contact">联系我们</a></li>
             </ul>
+            <!-- 语言切换下拉框 -->
             <div class="language-switcher">
                 <div class="dropdown-language">
                     <button class="dropdown-toggle" id="lang-toggle">
@@ -54,15 +58,17 @@
                     </ul>
                 </div>
             </div>
+            <!-- 移动端菜单切换按钮 -->
             <div class="mobile-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
-    <!-- 헤더 영역 -->
+    <!-- ======================= 头部英雄区域 ======================= -->
     <header class="hero" id="home">
         <div class="container hero-content">
             <h1 data-i18n="hero_title">有限世界 · 无限维度</h1>
             <p data-i18n="hero_subtitle">南阳维度智能装备 - 为全球制造企业提供高精度、高可靠性的自动化生产解决方案</p>
+            <!-- 企业理念 -->
             <div class="company-values-compact">
                 <div class="value-declaration">
                     <h3 data-i18n="values_declaration_title">企业理念宣言</h3>
@@ -79,6 +85,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- 行动号召按钮 -->
             <div class="hero-btns">
                 <a href="#solutions" class="btn btn-primary" data-i18n="hero_btn_solutions">行业解决方案</a>
                 <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">获取方案咨询</a>
@@ -86,7 +93,7 @@
         </div>
     </header>
 
-    <!-- 회사 소개 -->
+    <!-- ======================= 关于我们区域 ======================= -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
@@ -99,18 +106,9 @@
                     <p data-i18n="about_p1">南阳维度智能装备有限公司成立于2017年，核心团队拥有15年以上自动化设备研发经验，已为50+制造企业提供自动化升级服务。</p>
                     <p data-i18n="about_p2">我们专注于：精密装配系统、智能检测设备、柔性生产线和数字化工厂整体解决方案。</p>
                     <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">100+</div>
-                            <div data-i18n="about_stat1">服务客户</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">20+</div>
-                            <div data-i18n="about_stat2">拥有技术</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">98.7%</div>
-                            <div data-i18n="about_stat3">设备稼动率</div>
-                        </div>
+                        <div class="stat-item"><div class="stat-number">100+</div><div data-i18n="about_stat1">服务客户</div></div>
+                        <div class="stat-item"><div class="stat-number">20+</div><div data-i18n="about_stat2">拥有技术</div></div>
+                        <div class="stat-item"><div class="stat-number">98.7%</div><div data-i18n="about_stat3">设备稼动率</div></div>
                     </div>
                 </div>
                 <div class="about-image">
@@ -120,13 +118,14 @@
         </div>
     </section>
 
-    <!-- 발전 과정 -->
+    <!-- ======================= 发展历程区域 ======================= -->
     <section class="timeline" id="timeline">
         <div class="container">
             <div class="section-title">
                 <h2 data-i18n="timeline_title">发展历程</h2>
             </div>
             <div class="timeline-items">
+                <!-- 单个时间点 -->
                 <div class="timeline-item timeline-left"><div class="timeline-date">2017</div><div class="timeline-content"><h3 data-i18n="timeline_2017_title">公司成立</h3><p data-i18n="timeline_2017_p">2017年1月，南阳维度智能装备有限公司正式成立，同年与韩国NICE ENGINE建立合作关系，完成中瑞荣物流线项目;与韩国SOOSUNG完成BHMC#5LEAK机安装调试。</p></div></div>
                 <div class="timeline-item timeline-right"><div class="timeline-date">2018</div><div class="timeline-content"><h3 data-i18n="timeline_2018_title">业务扩展</h3><p data-i18n="timeline_2018_p">2018年与韩华、韩国PTM建立合作，完成双林汽车6AT FWD机型组装和测试线项目；与韩国DRB建立，合作为奇瑞汽车提供前后风挡玻璃涂胶线。</p></div></div>
                 <div class="timeline-item timeline-left"><div class="timeline-date">2019</div><div class="timeline-content"><h3 data-i18n="timeline_2019_title">技术突破</h3><p data-i18n="timeline_2019_p">2019年完成DYK明进DL3C&SP2C车型焊接线；并与韩国HYUNDAI MOVEX建立合作，进军轮胎行业物流线项目。</p></div></div>
@@ -137,19 +136,22 @@
         </div>
     </section>
 
-    <!-- 산업별 솔루션 -->
+    <!-- ======================= 行业解决方案区域 ======================= -->
     <section class="industry-solutions" id="solutions">
         <div class="container">
             <div class="section-title">
                 <h2 data-i18n="solutions_title">行业定制解决方案</h2>
                 <p data-i18n="solutions_subtitle">针对不同行业的特殊需求提供专属自动化方案</p>
             </div>
+            <!-- 选项卡容器 -->
             <div class="solution-tabs">
+                <!-- 选项卡按钮 -->
                 <div class="tab-buttons">
                     <button class="tab-btn active" data-tab="automotive" data-i18n="solutions_tab_auto">汽车制造</button>
                     <button class="tab-btn" data-tab="battery" data-i18n="solutions_tab_battery">动力电池</button>
                     <button class="tab-btn" data-tab="logistics" data-i18n="solutions_tab_logistics">智能物流</button>
                 </div>
+                <!-- 选项卡内容 -->
                 <div class="tab-content" id="automotive">
                      <div class="solution-detail">
                         <h3>汽车行业自动化</h3>
@@ -211,19 +213,22 @@
         </div>
     </section>
 
-    <!-- 장비 전시 -->
+    <!-- ======================= 设备展示区域 ======================= -->
     <section class="equipment-showcase" id="equipment">
         <div class="container">
             <div class="section-title">
                 <h2 data-i18n="equipment_title">核心设备展示</h2>
+                <!-- JS动态更新的描述区域 -->
                 <div class="dynamic-description">
                     <p class="tech-desc"></p>
                     <p class="application-desc"></p>
                 </div>
             </div>
+            <!-- 轮播图容器 -->
             <div class="equipment-carousel">
                 <button class="carousel-button prev" aria-label="上一个设备"><i class="fas fa-chevron-left"></i></button>
                 <div class="carousel-container">
+                    <!-- 第一个设备幻灯片 -->
                     <div class="carousel-slide" data-tech-desc="100%自主研发" data-app-desc="CNC自动上下料设备采用先进技术，实现一台机器人为8台CNC设备自动上下料，可切换30个型号，提升作业效率，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型。">
                         <div class="model-viewer-container">
                             <model-viewer data-src="assets/models/AGV.glb" ar camera-controls shadow-intensity="1" style="width:100%; height:500px;" alt="CNC自动上下料设备3D模型">
@@ -248,6 +253,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 第二个设备幻灯片 -->
                     <div class="carousel-slide" data-tech-desc="100%自主研发" data-app-desc="软包三元锂电池检测与码垛系统，支持检测功能灵活扩展，包括IV/IR/OCV、电芯正反面拍照、极耳与码垛位置检测、TRAY及电池拍照，自动排出NG及MES不良品。数据实时记录并存储至NAS，支持追溯。">
                         <div class="model-viewer-container">
                             <model-viewer data-src="assets/models/CellPacking.glb" ar camera-controls shadow-intensity="1" style="width:100%; height:500px;" alt="电芯Packing设备3D模型">
@@ -274,6 +280,7 @@
                     </div>
                 </div>
                 <button class="carousel-button next" aria-label="下一个设备"><i class="fas fa-chevron-right"></i></button>
+                <!-- 轮播图指示器 -->
                 <div class="carousel-indicators">
                     <button class="indicator" aria-label="显示设备1"></button>
                     <button class="indicator" aria-label="显示设备2"></button>
@@ -282,13 +289,14 @@
         </div>
     </section>
 
-    <!-- 성공 사례 -->
+    <!-- ======================= 成功案例区域 ======================= -->
     <section class="projects" id="cases">
         <div class="container">
             <div class="section-title">
                 <h2 data-i18n="cases_title">成功案例</h2>
                 <p data-i18n="cases_subtitle">服务全球知名制造企业</p>
             </div>
+            <!-- 案例筛选按钮 -->
             <div class="projects-filter">
                 <button class="filter-btn active" data-i18n="cases_filter_all">全部</button>
                 <button class="filter-btn" data-i18n="cases_filter_general">通用设备</button>
@@ -297,8 +305,9 @@
                 <button class="filter-btn" data-i18n="cases_filter_logistics">智能物流</button>
                 <button class="filter-btn" data-i18n="cases_filter_software">软件开发</button>
             </div>
+            <!-- 案例卡片网格布局 -->
             <div class="projects-grid">
-                <!-- Example Card (Populated by JS or backend in a real app, here for static example) -->
+                <!-- 单个案例卡片 -->
                  <div class="project-card" data-title="CNC自动上下料" data-category="通用设备" data-image="assets/images/AGV/AGV01.jpg,assets/images/AGV/AGV02.jpg" data-description="一台机器人为8台CNC设备自动上下料，可切换30个型号，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型。" data-specs='{"机器人": "DOOSAN", "C/T": "45秒", "AGV": "仙工智能", "特征": "柔性，兼容多型号"}'>
                     <div class="project-image view-detail-trigger" style="background-image: url('assets/images/AGV/AGV01.jpg')">
                         <div class="project-overlay"><h3 class="overlay-text">查看项目详情</h3></div>
@@ -346,7 +355,7 @@
         </div>
     </section>
 
-    <!-- 고객 후기 -->
+    <!-- ======================= 客户见证区域 ======================= -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title"><h2 data-i18n="testimonials_title">客户见证</h2></div>
@@ -362,7 +371,7 @@
         </div>
     </section>
 
-    <!-- ROI 계산기 -->
+    <!-- ======================= ROI计算器区域 ======================= -->
     <section class="roi-calculator" id="roi">
         <div class="container">
             <div class="calculator-container">
@@ -386,11 +395,12 @@
         </div>
     </section>
 
-    <!-- 문의하기 -->
+    <!-- ======================= 联系我们区域 ======================= -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title"><h2 data-i18n="contact_title">联系我们</h2><p data-i18n="contact_subtitle">获取专属自动化解决方案</p></div>
             <div class="contact-grid">
+                <!-- 左侧联系信息 -->
                 <div class="contact-info">
                     <h3 data-i18n="contact_support_title">24小时服务支持</h3><p data-i18n="contact_support_p">我们的工程师团队随时为您提供技术咨询和售后服务</p>
                     <div class="contact-details">
@@ -400,6 +410,7 @@
                         <div id="map" style="height:300px; border-radius: 8px; margin-top:20px;"></div>
                     </div>
                 </div>
+                <!-- 右侧联系表单 -->
                 <div class="contact-form">
                     <h3 data-i18n="contact_form_title">获取定制方案</h3>
                     <form action="https://formspree.io/f/xeoklykp" method="POST">
@@ -417,7 +428,7 @@
         </div>
     </section>
 
-    <!-- 푸터 -->
+    <!-- ======================= 页脚区域 ======================= -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -462,21 +473,26 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer_copyright">© 2023 南阳维度智能装备有限公司 版权所有 | <a href="https://beian.miit.gov.cn/" target="_blank" style="color:inherit;">鲁ICP备123456789号</a></p>
+                <p data-i18n="footer_copyright">© 2024 南阳维度智能装备有限公司 版权所有 | <a href="https://beian.miit.gov.cn/" target="_blank" style="color:inherit;">鲁ICP备123456789号</a></p>
             </div>
         </div>
     </footer>
 
-    <!-- 모달 -->
+    <!-- ======================= 模态框 (弹窗) 结构 ======================= -->
+    <!-- 详情模态框 -->
     <div id="detail-modal" class="modal"><div class="modal-content"><button class="modal-close-btn">×</button><div class="modal-body"></div></div></div>
+    <!-- 视频模态框 -->
     <div id="video-modal" class="modal"><div class="video-modal-content"><button class="modal-close-btn">×</button><div class="video-container"></div></div></div>
 
-    <!-- 스크립트 -->
+    <!-- ======================= 脚本加载 ======================= -->
+    <!-- Fancybox (图片画廊) 库 -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- 自定义主逻辑 -->
     <script src="js/main.js"></script>
+    <!-- 语言切换逻辑 -->
     <script src="js/lang.js"></script>
     
-    <!-- 구조화된 데이터 -->
+    <!-- ======================= SEO 结构化数据 ======================= -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

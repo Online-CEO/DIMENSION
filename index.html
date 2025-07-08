@@ -304,8 +304,7 @@
                     <!-- 第一个设备 -->
                     <div class="carousel-slide active" data-tech-desc="100%完全自主研发" data-app-desc="CNC自动上下料设备采用先进的技术，实现一台机器人为8台CNC设备自动上下料，可切换30个型号，提升作业效率，具备视觉智能检测与定位功能，可以经过简单配置即可实现产品快速换型，是CNC车间升级转型、提高效率和安全性的优质设备。">
                         <div class="model-viewer-container">
-                            <model-viewer data-src="assets/models/AGV.glb"
-                                
+                            <model-viewer data-src="https://upsubs.com/assets/models/AGV.glb"
                                 ar
                                 camera-controls
                                 shadow-intensity="1"
@@ -352,7 +351,7 @@
                     <!-- 第二个设备 -->
                     <div class="carousel-slide" data-tech-desc="100%完全自主研发" data-app-desc="软包三元锂电池检测与码垛系统，支持检测功能灵活扩展，包括IV/IR/OCV、电芯正反面拍照、极耳与码垛位置检测、TRAY及电池拍照，自动排出NG及MES不良品。数据实时记录并存储至NAS，支持追溯。可扩展至双投入口，最高产能24PPM。">
                         <div class="model-viewer-container">
-                            <model-viewer data-src="assets/models/CellPacking.glb"
+                            <model-viewer data-src="https://upsubs.com/assets/models/CellPacking.glb"
                                 ar
                                 camera-controls
                                 shadow-intensity="1"
@@ -407,97 +406,6 @@
             </div>
         </div>
     </section>
-
-    <style>
-        .equipment-carousel {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        .carousel-container {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        
-        .carousel-slide {
-            min-width: 100%;
-            display: none;
-        }
-        
-        .carousel-slide.active {
-            display: block;
-        }
-        
-        .carousel-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.7);
-            color: #333;
-            border: none;
-            padding: 15px;
-            cursor: pointer;
-            z-index: 10;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .carousel-button.prev {
-            left: 10px;
-        }
-        
-        .carousel-button.next {
-            right: 10px;
-        }
-        
-        .carousel-button:hover {
-            background: rgba(255,255,255,0.9);
-            color: #000;
-        }
-        
-        .carousel-indicators {
-            display: flex;
-            justify-content: center;
-            padding: 20px 0;
-        }
-        
-        .carousel-indicators .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ccc;
-            border: none;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-        
-        .carousel-indicators .indicator.active {
-            background: #333;
-        }
-        
-        .dynamic-description {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .tech-desc {
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        
-        .application-desc {
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {

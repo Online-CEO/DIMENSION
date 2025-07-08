@@ -19,7 +19,64 @@ function initMobileMenu() {
       : '<i class="fas fa-bars"></i>';
   });
 }
+// ===== 设备轮播功能 =====
+document.addEventListener("DOMContentLoaded", function () {
+  const carousel = document.querySelector(".equipment-carousel");
+  const container = carousel.querySelector(".carousel-container");
+  const slides = carousel.querySelectorAll(".carousel-slide");
+  const prevBtn = carousel.querySelector(".carousel-button.prev");
+  const nextBtn = carousel.querySelector(".carousel-button.next");
+  const indicators = carousel.querySelectorAll(".indicator");
 
+  const techDesc = document.querySelector(".tech-desc");
+  const appDesc = document.querySelector(".application-desc");
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      const shouldShow = index === currentIndex;
+      slide.classList.toggle("active", shouldShow);
+
+      if (shouldShow) {
+        techDesc.textContent = slide.dataset.techDesc;
+        appDesc.textContent = slide.dataset.appDesc;
+
+        const modelViewer = slide.querySelector("model-viewer");
+        if (modelViewer && modelViewer.dataset.src) {
+          modelViewer.src = modelViewer.dataset.src;
+        }
+      }
+    });
+
+    indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  }
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+  });
+
+  updateCarousel();
+});
 // ===== 平滑滚动 =====
 function initSmoothScrolling() {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

@@ -893,6 +893,96 @@ model-viewer {
     color: var(--accent);
 }
 
+/* ===== 核心设备 ===== */
+.equipment-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: none;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.7);
+    color: #333;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background: rgba(255,255,255,0.9);
+    color: #000;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.carousel-indicators .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicators .indicator.active {
+    background: #333;
+}
+
+.dynamic-description {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tech-desc {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.application-desc {
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* ===== 客户见证 ===== */
 .testimonials {
     padding: 80px 0;

@@ -258,18 +258,20 @@ img {
     color: var(--primary);
 }
 
-/* ===== 头部英雄区域 ===== */
+/* ===== 头部区域 ===== */
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/Background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* 背景图固定，产生视差效果 */
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     text-align: center;
     color: white;
-    padding-top: 80px;
+    padding-top: 100px;
+    min-height: 100vh;
+    padding-bottom: 50px;
 }
 .hero-content {
     max-width: 900px;
@@ -625,10 +627,10 @@ img {
     background-color: rgba(0, 0, 0, 0.8);
 }
 .carousel-button.prev {
-    left: 20px;
+    left: 10px;
 }
 .carousel-button.next {
-    right: 20px;
+    right: 10px;
 }
 .carousel-indicators {
     display: flex;
@@ -698,6 +700,12 @@ img {
 .device-description > h3 {
     margin-top: 0;
     font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+.device-description > h4 {
+    margin-top: 0;
+    font-size: 1.0rem;
     color: var(--dark);
     margin-bottom: 15px;
 }
@@ -1340,6 +1348,10 @@ img {
         flex-direction: column;
     }
     
+    .carousel-button {
+    top: 25%;
+}
+
     .model-viewer-container {
         display: block;
         /* flex-direction: column; */

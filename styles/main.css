@@ -703,6 +703,12 @@ img {
     color: var(--dark);
     margin-bottom: 15px;
 }
+.device-description > h4 {
+    margin-top: 0;
+    font-size: 1.0rem;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
 .tech-features {
     list-style: none;
     margin-bottom: 25px;

@@ -1342,6 +1342,10 @@ img {
         flex-direction: column;
     }
     
+    .carousel-button {
+    top: 25%;
+}
+
     .model-viewer-container {
         display: block;
         /* flex-direction: column; */

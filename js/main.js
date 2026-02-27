@@ -206,7 +206,7 @@ function initProjectFilter() {
 
   const filterBtns = filterContainer.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(
-    ".projects-grid .project-card"
+    ".projects-grid .project-card",
   );
 
   filterBtns.forEach((btn) => {
@@ -498,7 +498,7 @@ function initDetailModal() {
     (e) =>
       e.target.matches(".modal-cta-btn") &&
       e.target.getAttribute("href").startsWith("#") &&
-      closeModal()
+      closeModal(),
   ); // 点击模态框内的锚点链接时关闭
 }
 
@@ -547,7 +547,7 @@ function initVideoModal() {
   closeBtn.addEventListener("click", closeModal);
   videoModal.addEventListener(
     "click",
-    (e) => e.target === videoModal && closeModal()
+    (e) => e.target === videoModal && closeModal(),
   );
   window.addEventListener("keydown", (e) => e.key === "Escape" && closeModal());
 }
@@ -567,7 +567,7 @@ function initTimelineAnimation() {
         }
       });
     },
-    { threshold: 0.1 }
+    { threshold: 0.1 },
   ); // 元素可见10%时触发
 
   timelineItems.forEach((item) => {
@@ -596,7 +596,7 @@ function lazyLoadModelViewers() {
         }
       });
     },
-    { rootMargin: "200px" } // 提前200px开始加载
+    { rootMargin: "200px" }, // 提前200px开始加载
   );
 
   modelViewers.forEach((viewer) => {
@@ -620,19 +620,20 @@ function initLazyLoadMap() {
 
   function initializeMap() {
     if (typeof BMap !== "undefined") {
-      const map = new BMap.Map("map");
-      const point = new BMap.Point(119.462976, 35.37343);
-      map.centerAndZoom(point, 15);
-      map.enableScrollWheelZoom();
-      const marker = new BMap.Marker(point);
-      map.addOverlay(marker);
-      const opts = { width: 200, height: 100, title: "维度智能" };
-      const infoWindow = new BMap.InfoWindow(
-        "地址：山东省日照市奎山街道现代路西徐州路中段",
-        opts
+      // 确保BMap对象已加载
+      const map = new BMap.Map("map"); // 创建地图实例
+      const point = new BMap.Point(119.519538, 35.391139); // 维度智能的经纬度坐标 35.391139,119.519538
+      map.centerAndZoom(point, 15); // 初始化地图，设置中心点和缩放级别
+      map.enableScrollWheelZoom(); // 启用滚轮缩放
+      const marker = new BMap.Marker(point); // 创建标注
+      map.addOverlay(marker); // 将标注添加到地图中
+      const opts = { width: 200, height: 100, title: "维度智能" }; // 信息窗口参数
+      const infoWindow = new BMap.InfoWindow( // 创建信息窗口对象
+        "地址：山东省日照市东港区连云港路66号 亚太创客中心603(6号厂房)",
+        opts,
       );
       marker.addEventListener("click", () =>
-        map.openInfoWindow(infoWindow, point)
+        map.openInfoWindow(infoWindow, point),
       );
     } else {
       console.error("百度地图API未能成功加载。");
@@ -655,7 +656,7 @@ function initLazyLoadMap() {
         obs.unobserve(mapContainer); // 加载后停止观察
       }
     },
-    { rootMargin: "100px 0px" }
+    { rootMargin: "100px 0px" },
   ); // 距离视口100px时提前加载
 
   observer.observe(mapContainer);

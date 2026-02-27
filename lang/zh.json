@@ -8,7 +8,7 @@
   "nav_contact": "联系我们",
 
   "hero_title": "有限世界 · 无限维度",
-  "hero_subtitle": "南阳维度智能装备 - 为全球制造企业提供高精度、高可靠性的自动化生产解决方案",
+  "hero_subtitle": "维度智能装备 - 为全球制造企业提供高精度、高可靠性的自动化生产解决方案",
   "values_declaration_title": "企业理念宣言",
   "values_slogan": "诚以立信 客以共生",
   "values_sub_slogan": "——与客户共绘成长蓝图——",
@@ -23,7 +23,7 @@
   "about_title": "关于维度智能",
   "about_subtitle": "15年专注工业自动化领域的技术积累与创新",
   "about_heading": "让生产更智能",
-  "about_p1": "南阳维度智能装备有限公司成立于2017年，核心团队拥有15年以上自动化设备研发经验，已为50+制造企业提供自动化升级服务。",
+  "about_p1": "维度智能装备有限公司成立于2017年,核心团队拥有15年以上自动化设备研发经验,已为50+制造企业提供自动化升级服务。",
   "about_p2": "我们专注于：精密装配系统、智能检测设备、柔性生产线和数字化工厂整体解决方案。",
   "about_stat1": "服务客户",
   "about_stat2": "拥有技术",
@@ -31,17 +31,17 @@
 
   "timeline_title": "发展历程",
   "timeline_2017_title": "公司成立",
-  "timeline_2017_p": "2017年1月，南阳维度智能装备有限公司正式成立，同年与韩国NICE ENGINE建立合作关系，完成中瑞荣物流线项目;与韩国SOOSUNG完成BHMC#5LEAK机安装调试。",
+  "timeline_2017_p": "2017年1月,维度智能装备有限公司正式成立,同年与韩国NICE ENGINE建立合作关系,完成中瑞荣物流线项目;与韩国SOOSUNG完成BHMC#5LEAK机安装调试。",
   "timeline_2018_title": "业务扩展",
-  "timeline_2018_p": "2018年与韩华、韩国PTM建立合作，完成双林汽车6AT FWD机型组装和测试线项目；与韩国DRB建立，合作为奇瑞汽车提供前后风挡玻璃涂胶线。",
+  "timeline_2018_p": "2018年与韩华、韩国PTM建立合作,完成双林汽车6AT FWD机型组装和测试线项目;与韩国DRB建立,合作为奇瑞汽车提供前后风挡玻璃涂胶线。",
   "timeline_2019_title": "技术突破",
-  "timeline_2019_p": "2019年完成DYK明进DL3C&SP2C车型焊接线；并与韩国HYUNDAI MOVEX建立合作，进军轮胎行业物流线项目。",
+  "timeline_2019_p": "2019年完成DYK明进DL3C&SP2C车型焊接线;并与韩国HYUNDAI MOVEX建立合作,进军轮胎行业物流线项目。",
   "timeline_2020_title": "设立新工厂",
-  "timeline_2020_p": "2020年设立日照工厂，为阿尔泰提供TM CASE LEAK TEST/组装机/测量系统，为SK北电爱思特制作CELL INSPECTION设备。",
+  "timeline_2020_p": "2020年设立日照工厂,为阿尔泰提供TM CASE LEAK TEST/组装机/测量系统,为SK北电爱思特制作CELL INSPECTION设备。",
   "timeline_2021_title": "品牌升级",
-  "timeline_2021_p": "2021年更名为“维度智能装备”，完成天津JCI仓储、长春玲珑TBR仓储项目，与双林集团、韩国纽禄美卡、斗山协作机器人建立关系。",
+  "timeline_2021_p": "2021年更名为“维度智能装备”,完成天津JCI仓储、长春玲珑TBR仓储项目,与双林集团、韩国纽禄美卡、斗山协作机器人建立关系。",
   "timeline_2022_title": "持续创新",
-  "timeline_2022_p": "2022年成立苏州张家港公司（苏州大盈智能装备），完成SK化成工厂设备换型、SK CELL PACKING设备、SK CELL合盘机项目、馨联动力后驱商用组装线。",
+  "timeline_2022_p": "2022年成立苏州张家港公司(苏州大盈智能装备),完成SK化成工厂设备换型、SK CELL PACKING设备、SK CELL合盘机项目、馨联动力后驱商用组装线。",
 
   "solutions_title": "行业定制解决方案",
   "solutions_subtitle": "针对不同行业的特殊需求提供专属自动化方案",
@@ -61,7 +61,7 @@
   "cases_filter_software": "软件开发",
 
   "testimonials_title": "客户见证",
-  "testimonial1_text": "“维度智能提供的电池PACKING生产线运行稳定，帮助我们实现了日出1W电芯的产能目标，产品合格率达到99.9%以上。”",
+  "testimonial1_text": "“维度智能提供的电池PACKING生产线运行稳定,帮助我们实现了日出1W电芯的产能目标,产品合格率达到99.9%以上。”",
   "testimonial1_name": "张**",
   "testimonial1_title": "SK 北电爱思特 生产工程师",
 
@@ -81,7 +81,7 @@
   "contact_support_title": "24小时服务支持",
   "contact_support_p": "我们的工程师团队随时为您提供技术咨询和售后服务",
   "contact_address_title": "总部地址",
-  "contact_address_p": "山东省日照市奎山街道现代路西徐州路中段",
+  "contact_address_p": "山东省日照市东港区连云港路66号 亚太创客中心603(6号厂房)",
   "contact_phone_title": "服务热线",
   "contact_email_title": "商务联系",
   "contact_form_title": "获取定制方案",
@@ -89,7 +89,7 @@
   "contact_form_privacy": "我们承诺保护您的隐私，您的信息仅用于项目沟通。",
 
   "footer_about_title": "关于维度智能",
-  "footer_about_p": "南阳维度智能装备有限公司是专业的工厂自动化解决方案提供商，致力于为制造企业提供智能化、数字化的生产装备和服务。",
+  "footer_about_p": "维度智能装备有限公司是专业的工厂自动化解决方案提供商，致力于为制造企业提供智能化、数字化的生产装备和服务。",
   "footer_links_title": "快速链接",
   "footer_services_title": "产品服务",
   "service1": "自动化装配线",
@@ -98,6 +98,6 @@
   "service4": "MES系统集成",
   "service5": "设备升级改造",
   "footer_contact_title": "联系我们",
-  "footer_address": "总部地址：山东省日照市奎山街道现代路西徐州路中段",
-  "footer_copyright": "© 2024 南阳维度智能装备有限公司 版权所有"
+  "footer_address": "总部地址:山东省日照市东港区连云港路66号 亚太创客中心603(6号厂房)",
+  "footer_copyright": "© 2024 维度智能装备有限公司 版权所有"
 }

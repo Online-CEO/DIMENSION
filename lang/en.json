@@ -23,7 +23,7 @@
   "about_title": "About Dimension",
   "about_subtitle": "15 Years of Accumulated Expertise and Innovation in Industrial Automation",
   "about_heading": "Making Production Smarter",
-  "about_p1": "Nanyang Dimension was founded in 2017. Our core team has over 15 years of R&D experience and has provided automation upgrades for 50+ manufacturing enterprises.",
+  "about_p1": "Dimension was founded in 2017. Our core team has over 15 years of R&D experience and has provided automation upgrades for 50+ manufacturing enterprises.",
   "about_p2": "We specialize in: Precision Assembly Systems, Intelligent Inspection Equipment, Flexible Production Lines, and Digital Factory Solutions.",
   "about_stat1": "Clients Served",
   "about_stat2": "Technologies Owned",
@@ -31,7 +31,7 @@
 
   "timeline_title": "Our Journey",
   "timeline_2017_title": "Company Founded",
-  "timeline_2017_p": "In Jan 2017, Nanyang Dimension was established, partnering with NICE ENGINE (Korea) to complete the ZhongRuiRong logistics line project and SOOSUNG (Korea) for the BHMC #5 Leak machine installation.",
+  "timeline_2017_p": "In Jan 2017, Dimension was established, partnering with NICE ENGINE (Korea) to complete the ZhongRuiRong logistics line project and SOOSUNG (Korea) for the BHMC #5 Leak machine installation.",
   "timeline_2018_title": "Business Expansion",
   "timeline_2018_p": "Partnered with Hanwha and PTM (Korea) for the Ssangyong Motor 6AT FWD assembly & test line. Collaborated with DRB (Korea) to provide a windshield gluing line for Chery Automobile.",
   "timeline_2019_title": "Technological Breakthrough",
@@ -81,7 +81,7 @@
   "contact_support_title": "24/7 Service Support",
   "contact_support_p": "Our engineering team is ready to provide technical consultation and after-sales service.",
   "contact_address_title": "Headquarters",
-  "contact_address_p": "West of Xiandai Rd, Kuishan St, Rizhao, Shandong, China",
+  "contact_address_p": "Room 603, Asia-Pacific Maker Center (Plant No. 6) No. 66 Lianyungang Road, Donggang District Rizhao, Shandong, China",
   "contact_phone_title": "Service Hotline",
   "contact_email_title": "Business Inquiries",
   "contact_form_title": "Get a Custom Solution",
@@ -89,7 +89,7 @@
   "contact_form_privacy": "We are committed to protecting your privacy. Your information will only be used for project communication.",
 
   "footer_about_title": "About Dimension",
-  "footer_about_p": "Nanyang Dimension is a professional provider of factory automation solutions, dedicated to offering intelligent and digital production equipment and services to manufacturing enterprises.",
+  "footer_about_p": "Dimension is a professional provider of factory automation solutions, dedicated to offering intelligent and digital production equipment and services to manufacturing enterprises.",
   "footer_links_title": "Quick Links",
   "footer_services_title": "Products & Services",
   "service1": "Automation Assembly Line",
@@ -98,6 +98,6 @@
   "service4": "MES System Integration",
   "service5": "Equipment Upgrade & Retrofit",
   "footer_contact_title": "Contact Us",
-  "footer_address": "Headquarters: West of Xiandai Rd, Kuishan St, Rizhao, Shandong, China",
-  "footer_copyright": "© 2024 Nanyang Dimension. All rights reserved."
+  "footer_address": "Headquarters: Room 603, Asia-Pacific Maker Center (Plant No. 6) No. 66 Lianyungang Road, Donggang District Rizhao, Shandong, China",
+  "footer_copyright": "© 2024 Dimension. All rights reserved."
 }
